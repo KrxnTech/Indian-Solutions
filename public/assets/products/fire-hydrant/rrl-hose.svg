@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041B33" />
+      <stop offset="100%" stop-color="#0A3663" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.08" />
+    </pattern>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="320" fill="url(#bgGrad)" />
+  <rect width="400" height="320" fill="url(#grid)" />
+  
+  <!-- Subtle circular glow -->
+  <circle cx="200" cy="160" r="90" fill="#062A4F" fill-opacity="0.5" stroke="#FFC400" stroke-opacity="0.2" stroke-width="1.5" />
+
+  <!-- Main Illustration Graphic -->
+  <g id="icon-group">
+    <path d="M150 140 L250 140 L250 180 L150 180 Z" fill="#062A4F" stroke="#FFFFFF" stroke-width="4" />
+      <circle cx="200" cy="110" r="30" fill="#D71920" stroke="#FFFFFF" stroke-width="3" />
+      <rect x="190" y="140" width="20" height="50" fill="#FFC400" />
+      <circle cx="200" cy="110" r="8" fill="#FFFFFF" />
+  </g>
+
+  <!-- Top Badge -->
+  <rect x="20" y="20" width="90" height="22" rx="4" fill="#031B33" stroke="#D71920" stroke-width="1.5" />
+  <text x="65" y="35" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle">ISS CERTIFIED</text>
+
+  <!-- Bottom Details Strip -->
+  <rect x="0" y="275" width="400" height="45" fill="#021324" />
+  <line x1="0" y1="275" x2="400" y2="275" stroke="#D71920" stroke-width="2" />
+  
+  <text x="20" y="295" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700">RRL Fire Delivery Hose</text>
+  <text x="20" y="310" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10">Fire Hydrant System • 63mm Coupled 30m Coil</text>
+
+  <!-- Brand watermark -->
+  <text x="380" y="303" fill="#FFC400" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="end">ISS</text>
+</svg>

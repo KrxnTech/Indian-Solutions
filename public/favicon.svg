@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Outer Shield Frame -->
+  <path
+    d="M24 3L6 10V22C6 33.5 13.8 43.6 24 46.5C34.2 43.6 42 33.5 42 22V10L24 3Z"
+    fill="#062A4F"
+  />
+
+  <!-- Safety Yellow Accent -->
+  <path
+    d="M24 7.5L37.5 12.5V21C37.5 29.5 31.8 37.5 24 40.5V7.5Z"
+    fill="#FFC400"
+    fill-opacity="0.18"
+  />
+
+  <!-- Safety Red Core Shield -->
+  <path
+    d="M24 12.5L14 16.5V23.5C14 30.5 18.2 36.8 24 39.2C29.8 36.8 34 30.5 34 23.5V16.5L24 12.5Z"
+    fill="#D71920"
+  />
+
+  <!-- Industrial Cross & Flame Geometry -->
+  <path
+    d="M24 16.5V34M16.5 25.25H31.5"
+    stroke="#FFFFFF"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Central Amber Hub -->
+  <circle cx="24" cy="25.25" r="2.25" fill="#FFC400" />
+</svg>

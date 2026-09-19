@@ -1,0 +1,91 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+/**
+ * ISS Brand Logo Component
+ * Supports 'dark' (for white/light backgrounds) and 'light' (for dark navy footers/backgrounds)
+ */
+export default function Logo({ variant = 'dark', size = 'md', to = '/' }) {
+  const isLight = variant === 'light';
+
+  const logoContent = (
+    <div className="flex items-center gap-3 select-none group">
+      {/* Industrial Shield / Safety Emblem */}
+      <div className="relative flex-shrink-0">
+        <svg
+          className={`${size === 'sm' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-10 h-10'} transition-transform duration-200 group-hover:scale-105`}
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          {/* Outer Shield */}
+          <path
+            d="M24 4L8 10V22C8 32.5 14.8 42.1 24 45C33.2 42.1 40 32.5 40 22V10L24 4Z"
+            fill={isLight ? '#031B33' : '#062A4F'}
+            stroke={isLight ? '#FFFFFF' : '#062A4F'}
+            strokeWidth="1.5"
+          />
+          {/* Safety Yellow Accent Stripe */}
+          <path
+            d="M24 8L36 12.5V21C36 28.5 30.9 35.8 24 38.5V8Z"
+            fill="#FFC400"
+            fillOpacity="0.15"
+          />
+          {/* Safety Red Fire & Protection Core Symbol */}
+          <path
+            d="M24 13L15 16.8V23.5C15 29.8 18.8 35.7 24 37.8C29.2 35.7 33 29.8 33 23.5V16.8L24 13Z"
+            fill="#D71920"
+          />
+          {/* Stylized ISS Flame / Cross Geometry */}
+          <path
+            d="M24 17V33M18 25H30"
+            stroke="#FFFFFF"
+            strokeWidth="2.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle cx="24" cy="25" r="2" fill="#FFC400" />
+        </svg>
+      </div>
+
+      {/* Brand Typographic Wordmark */}
+      <div className="flex flex-col justify-center leading-tight">
+        <div className="flex items-center gap-1.5">
+          <span
+            className={`font-heading font-extrabold tracking-tight ${
+              size === 'sm' ? 'text-lg' : size === 'lg' ? 'text-2xl' : 'text-xl'
+            } ${isLight ? 'text-white' : 'text-[#062A4F]'}`}
+          >
+            ISS
+          </span>
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#D71920]" />
+          <span
+            className={`font-heading font-semibold text-xs tracking-wider uppercase ${
+              isLight ? 'text-[#FFC400]' : 'text-[#D71920]'
+            }`}
+          >
+            Safety
+          </span>
+        </div>
+        <span
+          className={`font-heading font-semibold tracking-wider uppercase ${
+            size === 'sm' ? 'text-[9px]' : size === 'lg' ? 'text-[11px]' : 'text-[10px]'
+          } ${isLight ? 'text-slate-300' : 'text-[#64748B]'}`}
+        >
+          Indian Safety Solution
+        </span>
+      </div>
+    </div>
+  );
+
+  if (to) {
+    return (
+      <Link to={to} className="inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#062A4F] rounded">
+        {logoContent}
+      </Link>
+    );
+  }
+
+  return logoContent;
+}
