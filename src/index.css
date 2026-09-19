@@ -49,3 +49,85 @@
     background: #94A3B8;
   }
 }
+
+/* Hero Entrance Animations */
+@keyframes heroFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroCaretPulse {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.animate-hero-desc {
+  animation: heroFadeInUp 650ms cubic-bezier(0.16, 1, 0.3, 1) 350ms both;
+}
+
+.animate-hero-cta {
+  animation: heroFadeInUp 650ms cubic-bezier(0.16, 1, 0.3, 1) 550ms both;
+}
+
+.animate-hero-pillars {
+  animation: heroFadeInUp 650ms cubic-bezier(0.16, 1, 0.3, 1) 750ms both;
+}
+
+.animate-hero-card {
+  animation: heroFadeInUp 700ms cubic-bezier(0.16, 1, 0.3, 1) 600ms both;
+}
+
+.animate-hero-caret {
+  animation: heroCaretPulse 800ms ease-in-out infinite;
+}
+
+/* Scroll Reveal Classes (Native GPU-Friendly Opacity + TranslateY) */
+.reveal-base {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Accessibility - Absolute Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-base {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .animate-hero-desc,
+  .animate-hero-cta,
+  .animate-hero-pillars,
+  .animate-hero-card,
+  .animate-hero-caret {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

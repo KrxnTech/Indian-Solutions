@@ -14,11 +14,18 @@ const FALLBACK_IMAGE = '/assets/products/placeholder.svg';
  * - Subtle hover animation (-2px)
  */
 export default function ProductCard({ product }) {
-  const [imgSrc, setImgSrc] = useState(product?.image || FALLBACK_IMAGE);
+  const [prevImage, setPrevImage] = useState(product?.image);
   const [imgFailed, setImgFailed] = useState(false);
+
+  // Sync state during render when product prop changes (React recommended pattern)
+  if (product?.image !== prevImage) {
+    setPrevImage(product?.image);
+    setImgFailed(false);
+  }
 
   if (!product) return null;
 
+  const imgSrc = imgFailed ? FALLBACK_IMAGE : product?.image || FALLBACK_IMAGE;
   const detailUrl = `/products/${product.categorySlug}/${product.slug}`;
   const quoteUrl = `/contact?product=${encodeURIComponent(product.name)}&category=${encodeURIComponent(
     product.category
@@ -27,7 +34,6 @@ export default function ProductCard({ product }) {
   const handleImageError = () => {
     if (!imgFailed) {
       setImgFailed(true);
-      setImgSrc(FALLBACK_IMAGE);
     }
   };
 
@@ -36,7 +42,7 @@ export default function ProductCard({ product }) {
       {/* 1. Product Image Media Container */}
       <Link
         to={detailUrl}
-        className="relative block aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+        className="relative block aspect-[4/3] overflow-hidden bg-slate-50 border-b border-slate-100 select-none p-3.5"
         aria-label={`View details for ${product.name}`}
       >
         <img
@@ -44,11 +50,11 @@ export default function ProductCard({ product }) {
           alt={`${product.name} - ${product.category}`}
           loading="lazy"
           onError={handleImageError}
-          className="w-full h-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+          className="w-full h-full object-contain transition-transform duration-200 ease-out group-hover:scale-105"
         />
 
         {/* Category & Brand Badges */}
-        <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+        <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none z-10">
           <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-heading font-semibold uppercase tracking-wider bg-[#031B33]/90 text-white shadow-xs backdrop-blur-xs">
             {product.category}
           </span>

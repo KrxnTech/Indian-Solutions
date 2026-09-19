@@ -7,8 +7,8 @@ export const FOOTWEAR_PRODUCTS = [
     categorySlug: 'foot-protection',
     subCategory: 'Safety Shoes',
     brand: 'Allen Cooper',
-    image: '/assets/products/footwear/allen-cooper-ac-1008.svg',
-    images: ['/assets/products/footwear/allen-cooper-ac-1008.svg'],
+    image: '/assets/products/footwear/allen-cooper-ac-1008.webp',
+    images: ['/assets/products/footwear/allen-cooper-ac-1008.webp'],
     description:
       'Low ankle industrial safety shoes manufactured with genuine grain leather upper, 200J impact resistant steel toe cap, and dual density PU sole.',
     specifications: {
@@ -32,8 +32,8 @@ export const FOOTWEAR_PRODUCTS = [
     categorySlug: 'foot-protection',
     subCategory: 'Safety Shoes',
     brand: 'Allen Cooper',
-    image: '/assets/products/footwear/allen-cooper-ac-1156.svg',
-    images: ['/assets/products/footwear/allen-cooper-ac-1156.svg'],
+    image: '/assets/products/footwear/allen-cooper-ac-1156.webp',
+    images: ['/assets/products/footwear/allen-cooper-ac-1156.webp'],
     description:
       'High ankle work boots providing reinforced ankle collar support, padded tongue, steel toe protection, and slip-resistant rugged outsole for heavy construction.',
     specifications: {
@@ -56,8 +56,8 @@ export const FOOTWEAR_PRODUCTS = [
     categorySlug: 'foot-protection',
     subCategory: 'Safety Shoes',
     brand: 'Hillson',
-    image: '/assets/products/footwear/hillson-besto.svg',
-    images: ['/assets/products/footwear/hillson-besto.svg'],
+    image: '/assets/products/footwear/hillson-besto.webp',
+    images: ['/assets/products/footwear/hillson-besto.webp'],
     description:
       'Economical single density PU sole safety shoes with high-tensile steel toe cap, black synthetic leather upper, and anti-slip tread pattern.',
     specifications: {
@@ -79,8 +79,8 @@ export const FOOTWEAR_PRODUCTS = [
     categorySlug: 'foot-protection',
     subCategory: 'Safety Shoes',
     brand: 'Hillson',
-    image: '/assets/products/footwear/hillson-century.svg',
-    images: ['/assets/products/footwear/hillson-century.svg'],
+    image: '/assets/products/footwear/hillson-century.webp',
+    images: ['/assets/products/footwear/hillson-century.webp'],
     description:
       'Rugged high ankle safety footwear designed for engineering plants, mining, and fabrication floors with reinforced heel counter.',
     specifications: {
@@ -101,8 +101,8 @@ export const FOOTWEAR_PRODUCTS = [
     categorySlug: 'foot-protection',
     subCategory: 'Gumboots',
     brand: 'ISS',
-    image: '/assets/products/footwear/pvc-gumboot.svg',
-    images: ['/assets/products/footwear/pvc-gumboot.svg'],
+    image: '/assets/products/footwear/industrial-pvc-gumboots-steel-toe.webp',
+    images: ['/assets/products/footwear/industrial-pvc-gumboots-steel-toe.webp'],
     description:
       'Full height molded PVC gumboots equipped with internal steel toe cap for wet, muddy, chemical-handling, and water-logged industrial job sites.',
     specifications: {
@@ -124,8 +124,8 @@ export const FOOTWEAR_PRODUCTS = [
     categorySlug: 'foot-protection',
     subCategory: 'Safety Shoes',
     brand: 'ISS',
-    image: '/assets/products/footwear/executive-derby.svg',
-    images: ['/assets/products/footwear/executive-derby.svg'],
+    image: '/assets/products/footwear/executive-derby-safety-shoes.webp',
+    images: ['/assets/products/footwear/executive-derby-safety-shoes.webp'],
     description:
       'Smart formal derby-styled leather safety shoes suited for plant managers, safety officers, and engineers requiring office-to-plant protection.',
     specifications: {

@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
 import { Card, CardHeader, CardBody } from '../components/Card';
+import RevealOnScroll from '../components/RevealOnScroll';
 import { COMPANY_INFO } from '../data/company';
 import { Shield, Target, CheckCircle2, ArrowRight, MapPin, Phone, Mail, Wrench } from 'lucide-react';
 
@@ -9,15 +10,18 @@ export default function About() {
   return (
     <div className="py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Company Profile"
-          title="About Indian Safety Solution (ISS)"
-          description="A dedicated provider of complete industrial safety equipment, fire protection infrastructure, and workplace safety services based in Gujarat."
-          align="center"
-        />
+        <RevealOnScroll>
+          <SectionHeading
+            badge="Company Profile"
+            title="About Indian Safety Solution (ISS)"
+            description="A dedicated provider of complete industrial safety equipment, fire protection infrastructure, and workplace safety services based in Gujarat."
+            align="center"
+          />
+        </RevealOnScroll>
 
         {/* Company Overview Card */}
-        <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-10 shadow-xs mb-12">
+        <RevealOnScroll>
+          <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-10 shadow-xs mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider text-[#D71920]">
@@ -76,81 +80,92 @@ export default function About() {
             </div>
           </div>
         </div>
+      </RevealOnScroll>
 
         {/* 3 Core Operating Focus Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Card>
-            <CardHeader>
-              <div className="w-10 h-10 rounded-lg bg-[#062A4F]/10 flex items-center justify-center text-[#062A4F] mb-3">
-                <Target className="w-5 h-5" />
-              </div>
-              <h4 className="font-heading font-bold text-lg text-[#062A4F]">Comprehensive Supply</h4>
-            </CardHeader>
-            <CardBody>
-              <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
-                Supplying everything from daily worker PPE to specialized chemical spill kits, fire hydrant line valves, and emergency egress signage under one roof.
-              </p>
-            </CardBody>
-          </Card>
+          <RevealOnScroll delay={0} className="h-full">
+            <Card className="h-full">
+              <CardHeader>
+                <div className="w-10 h-10 rounded-lg bg-[#062A4F]/10 flex items-center justify-center text-[#062A4F] mb-3">
+                  <Target className="w-5 h-5" />
+                </div>
+                <h4 className="font-heading font-bold text-lg text-[#062A4F]">Comprehensive Supply</h4>
+              </CardHeader>
+              <CardBody>
+                <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+                  Supplying everything from daily worker PPE to specialized chemical spill kits, fire hydrant line valves, and emergency egress signage under one roof.
+                </p>
+              </CardBody>
+            </Card>
+          </RevealOnScroll>
 
-          <Card>
-            <CardHeader>
-              <div className="w-10 h-10 rounded-lg bg-[#D71920]/10 flex items-center justify-center text-[#D71920] mb-3">
-                <Wrench className="w-5 h-5" />
-              </div>
-              <h4 className="font-heading font-bold text-lg text-[#062A4F]">Turnkey Project Execution</h4>
-            </CardHeader>
-            <CardBody>
-              <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
-                Undertaking industrial fire fighting piping installations, hydrant network erections, alarm panel integrations, and safety sign board fabrication.
-              </p>
-            </CardBody>
-          </Card>
+          <RevealOnScroll delay={60} className="h-full">
+            <Card className="h-full">
+              <CardHeader>
+                <div className="w-10 h-10 rounded-lg bg-[#D71920]/10 flex items-center justify-center text-[#D71920] mb-3">
+                  <Wrench className="w-5 h-5" />
+                </div>
+                <h4 className="font-heading font-bold text-lg text-[#062A4F]">Turnkey Project Execution</h4>
+              </CardHeader>
+              <CardBody>
+                <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+                  Undertaking industrial fire fighting piping installations, hydrant network erections, alarm panel integrations, and safety sign board fabrication.
+                </p>
+              </CardBody>
+            </Card>
+          </RevealOnScroll>
 
-          <Card>
-            <CardHeader>
-              <div className="w-10 h-10 rounded-lg bg-[#FFC400]/20 flex items-center justify-center text-[#062A4F] mb-3">
-                <Shield className="w-5 h-5" />
-              </div>
-              <h4 className="font-heading font-bold text-lg text-[#062A4F]">Industrial Safety Focus</h4>
-            </CardHeader>
-            <CardBody>
-              <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
-                Dedicated to helping plants maintain safe operations, prevent fire incidents, protect personnel from industrial hazards, and fulfill statutory safety norms.
-              </p>
-            </CardBody>
-          </Card>
+          <RevealOnScroll delay={120} className="h-full">
+            <Card className="h-full">
+              <CardHeader>
+                <div className="w-10 h-10 rounded-lg bg-[#FFC400]/20 flex items-center justify-center text-[#062A4F] mb-3">
+                  <Shield className="w-5 h-5" />
+                </div>
+                <h4 className="font-heading font-bold text-lg text-[#062A4F]">Industrial Safety Focus</h4>
+              </CardHeader>
+              <CardBody>
+                <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+                  Dedicated to helping plants maintain safe operations, prevent fire incidents, protect personnel from industrial hazards, and fulfill statutory safety norms.
+                </p>
+              </CardBody>
+            </Card>
+          </RevealOnScroll>
         </div>
 
         {/* Core Areas of Business List */}
-        <div className="bg-[#F5F7FA] border border-slate-200 rounded-xl p-8 mb-12">
-          <h3 className="font-heading font-bold text-xl text-[#062A4F] mb-4">
-            Documented Business Divisions
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-            {COMPANY_INFO.coreFocus.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-[#17202A] bg-white p-3 rounded-md border border-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-[#D71920] flex-shrink-0" />
-                <span className="font-medium">{item}</span>
-              </div>
-            ))}
+        <RevealOnScroll className="mb-12">
+          <div className="bg-[#F5F7FA] border border-slate-200 rounded-xl p-8">
+            <h3 className="font-heading font-bold text-xl text-[#062A4F] mb-4">
+              Documented Business Divisions
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {COMPANY_INFO.coreFocus.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-[#17202A] bg-white p-3 rounded-md border border-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-[#D71920] flex-shrink-0" />
+                  <span className="font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
 
         {/* CTA Box */}
-        <div className="text-center bg-[#062A4F] text-white rounded-xl p-8 sm:p-10 space-y-4">
-          <h3 className="font-heading font-bold text-2xl">
-            Partner with Indian Safety Solution for Your Workplace Safety
-          </h3>
-          <p className="text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Reach out to our sales and technical team for product catalogues, price estimation, or fire fighting project queries.
-          </p>
-          <div className="pt-2">
-            <Button to="/contact" variant="primary" size="lg" icon={ArrowRight}>
-              Request Information / Quote
-            </Button>
+        <RevealOnScroll>
+          <div className="text-center bg-[#062A4F] text-white rounded-xl p-8 sm:p-10 space-y-4">
+            <h3 className="font-heading font-bold text-2xl">
+              Partner with Indian Safety Solution for Your Workplace Safety
+            </h3>
+            <p className="text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+              Reach out to our sales and technical team for product catalogues, price estimation, or fire fighting project queries.
+            </p>
+            <div className="pt-2">
+              <Button to="/contact" variant="primary" size="lg" icon={ArrowRight}>
+                Request Information / Quote
+              </Button>
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </div>
   );

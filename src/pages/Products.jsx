@@ -5,6 +5,7 @@ import ProductSearch from '../components/ProductSearch';
 import ProductFilters from '../components/ProductFilters';
 import Pagination from '../components/Pagination';
 import Button from '../components/Button';
+import RevealOnScroll from '../components/RevealOnScroll';
 import {
   ALL_PRODUCTS,
   CATALOGUE_CATEGORIES,
@@ -29,21 +30,26 @@ export default function Products() {
 
   // Helper to update search params cleanly
   const updateParams = (updates) => {
-    const nextParams = new URLSearchParams(searchParams);
-    Object.entries(updates).forEach(([key, val]) => {
-      if (
-        val === undefined ||
-        val === null ||
-        val === '' ||
-        val === 'all' ||
-        (key === 'page' && Number(val) <= 1)
-      ) {
-        nextParams.delete(key);
-      } else {
-        nextParams.set(key, String(val));
-      }
-    });
-    setSearchParams(nextParams, { replace: true });
+    setSearchParams(
+      (prevParams) => {
+        const nextParams = new URLSearchParams(prevParams);
+        Object.entries(updates).forEach(([key, val]) => {
+          if (
+            val === undefined ||
+            val === null ||
+            val === '' ||
+            val === 'all' ||
+            (key === 'page' && Number(val) <= 1)
+          ) {
+            nextParams.delete(key);
+          } else {
+            nextParams.set(key, String(val));
+          }
+        });
+        return nextParams;
+      },
+      { replace: true }
+    );
   };
 
   // Handle Category Change
@@ -137,17 +143,19 @@ export default function Products() {
     <div className="py-6 sm:py-10 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. Compact Page Header */}
-        <header className="mb-6 sm:mb-8 text-center sm:text-left">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider bg-[#062A4F]/10 text-[#062A4F] mb-2">
-            <span>Product Catalogue</span>
-          </div>
-          <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#062A4F] tracking-tight">
-            Industrial Safety &amp; Fire Protection Catalogue
-          </h1>
-          <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-2xl leading-relaxed">
-            Explore our industrial and fire safety product range. Certified PPE, fire installations, and facility hazard controls.
-          </p>
-        </header>
+        <RevealOnScroll>
+          <header className="mb-6 sm:mb-8 text-center sm:text-left">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider bg-[#062A4F]/10 text-[#062A4F] mb-2">
+              <span>Product Catalogue</span>
+            </div>
+            <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#062A4F] tracking-tight">
+              Industrial Safety &amp; Fire Protection Catalogue
+            </h1>
+            <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-2xl leading-relaxed">
+              Explore our industrial and fire safety product range. Certified PPE, fire installations, and facility hazard controls.
+            </p>
+          </header>
+        </RevealOnScroll>
 
         {/* Invalid Category Alert Banner (Graceful fallback) */}
         {!isCategoryValid && (
@@ -168,7 +176,8 @@ export default function Products() {
         )}
 
         {/* 2. Search & Filter Bar */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-xs mb-6 space-y-4">
+        <RevealOnScroll>
+          <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-xs mb-6 space-y-4">
           {/* Search Input */}
           <ProductSearch
             value={searchQuery}
@@ -266,37 +275,40 @@ export default function Products() {
             )}
           </div>
         </div>
+      </RevealOnScroll>
 
         {/* 4. Main Product Grid */}
-        {paginatedProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 mb-10">
-            {paginatedProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        ) : (
-          /* Empty Search / Filter State */
-          <div className="py-14 text-center bg-white border border-slate-200 rounded-2xl p-8 max-w-xl mx-auto space-y-4 my-8">
-            <div className="w-14 h-14 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
-              <SearchX className="w-7 h-7" />
+        <RevealOnScroll>
+          {paginatedProducts.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 mb-10">
+              {paginatedProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
             </div>
-            <h2 className="font-heading font-bold text-lg text-[#062A4F]">
-              No Products Found
-            </h2>
-            <p className="text-xs text-[#64748B] leading-relaxed">
-              We couldn&rsquo;t find any safety products matching your current search or category criteria. Try adjusting your search term or clearing the active filters.
-            </p>
-            <div className="pt-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleClearFilters}
-              >
-                Clear All Filters
-              </Button>
+          ) : (
+            /* Empty Search / Filter State */
+            <div className="py-14 text-center bg-white border border-slate-200 rounded-2xl p-8 max-w-xl mx-auto space-y-4 my-8">
+              <div className="w-14 h-14 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
+                <SearchX className="w-7 h-7" />
+              </div>
+              <h2 className="font-heading font-bold text-lg text-[#062A4F]">
+                No Products Found
+              </h2>
+              <p className="text-xs text-[#64748B] leading-relaxed">
+                We couldn&rsquo;t find any safety products matching your current search or category criteria. Try adjusting your search term or clearing the active filters.
+              </p>
+              <div className="pt-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleClearFilters}
+                >
+                  Clear All Filters
+                </Button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </RevealOnScroll>
 
         {/* 5. Pagination Component */}
         <Pagination
@@ -307,39 +319,41 @@ export default function Products() {
         />
 
         {/* Bottom Procurement Advisory Banner */}
-        <div className="bg-[#031B33] text-white p-6 sm:p-8 rounded-2xl border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1.5 text-center md:text-left">
-            <span className="text-xs font-heading font-semibold uppercase tracking-wider text-[#FFC400]">
-              Direct B2B Procurement Support
-            </span>
-            <h3 className="font-heading text-lg sm:text-xl font-bold">
-              Looking for a Specific Model, Capacity, or Bulk BOQ?
-            </h3>
-            <p className="text-slate-300 text-xs max-w-xl">
-              Indian Safety Solution supplies direct consignments for plant safety teams, EPC contractors, and institutional buyers across Gujarat and India.
-            </p>
-          </div>
+        <RevealOnScroll>
+          <div className="bg-[#031B33] text-white p-6 sm:p-8 rounded-2xl border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-1.5 text-center md:text-left">
+              <span className="text-xs font-heading font-semibold uppercase tracking-wider text-[#FFC400]">
+                Direct B2B Procurement Support
+              </span>
+              <h3 className="font-heading text-lg sm:text-xl font-bold">
+                Looking for a Specific Model, Capacity, or Bulk BOQ?
+              </h3>
+              <p className="text-slate-300 text-xs max-w-xl">
+                Indian Safety Solution supplies direct consignments for plant safety teams, EPC contractors, and institutional buyers across Gujarat and India.
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 flex-shrink-0 w-full sm:w-auto">
-            <Button
-              to="/contact"
-              variant="primary"
-              size="md"
-              icon={MessageSquareQuote}
-              className="w-full sm:w-auto"
-            >
-              Request Bulk Quote
-            </Button>
-            <Button
-              href={`tel:${COMPANY_INFO.phonePrimary.replace(/\s+/g, '')}`}
-              variant="outline"
-              size="md"
-              className="border-white/40 text-white hover:bg-white/10 hover:border-white w-full sm:w-auto"
-            >
-              Call Safety Desk
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center gap-3 flex-shrink-0 w-full sm:w-auto">
+              <Button
+                to="/contact"
+                variant="primary"
+                size="md"
+                icon={MessageSquareQuote}
+                className="w-full sm:w-auto"
+              >
+                Request Bulk Quote
+              </Button>
+              <Button
+                href={`tel:${COMPANY_INFO.phonePrimary.replace(/\s+/g, '')}`}
+                variant="outline"
+                size="md"
+                className="border-white/40 text-white hover:bg-white/10 hover:border-white w-full sm:w-auto"
+              >
+                Call Safety Desk
+              </Button>
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </div>
   );

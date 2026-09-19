@@ -24,7 +24,7 @@ export default function Button({
   ...props
 }) {
   const baseStyles =
-    'inline-flex items-center justify-center font-heading font-semibold text-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed select-none rounded-md';
+    'group inline-flex items-center justify-center font-heading font-semibold text-center transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed select-none rounded-md';
 
   const variantStyles = {
     primary:

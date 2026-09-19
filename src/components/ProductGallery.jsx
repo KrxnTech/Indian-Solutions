@@ -12,8 +12,15 @@ export default function ProductGallery({
   title = 'Product Image',
   className = '',
 }) {
+  const [prevImages, setPrevImages] = useState(images);
   const [activeIndex, setActiveIndex] = useState(0);
   const [failedImages, setFailedImages] = useState({});
+
+  if (images !== prevImages) {
+    setPrevImages(images);
+    setActiveIndex(0);
+    setFailedImages({});
+  }
 
   const validImages = images && images.length > 0 ? images : [FALLBACK_IMAGE];
   const currentImage = failedImages[activeIndex]
@@ -30,13 +37,13 @@ export default function ProductGallery({
   return (
     <div className={`space-y-4 ${className}`.trim()}>
       {/* Main Image Frame (Consistent 4:3 Aspect Ratio) */}
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-900 border border-slate-200 shadow-xs flex items-center justify-center select-none">
+      <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-50 border border-slate-200 shadow-xs flex items-center justify-center select-none p-4 sm:p-6">
         <img
           src={currentImage}
           alt={`${title} - View ${activeIndex + 1}`}
           loading="lazy"
           onError={() => handleImageError(activeIndex)}
-          className="w-full h-full object-cover transition-opacity duration-200 ease-out"
+          className="w-full h-full object-contain transition-opacity duration-200 ease-out"
         />
       </div>
 
@@ -64,7 +71,7 @@ export default function ProductGallery({
                 }}
                 aria-label={`Switch to image view ${idx + 1} of ${validImages.length}`}
                 aria-pressed={isActive}
-                className={`relative w-20 h-16 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 bg-slate-900 focus:outline-none focus:ring-2 focus:ring-[#062A4F] ${
+                className={`relative w-20 h-16 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 bg-slate-50 p-1 focus:outline-none focus:ring-2 focus:ring-[#062A4F] ${
                   isActive
                     ? 'border-[#D71920] ring-2 ring-[#D71920]/30 opacity-100 scale-102'
                     : 'border-slate-200 hover:border-slate-400 opacity-70 hover:opacity-100'
@@ -75,7 +82,7 @@ export default function ProductGallery({
                   alt=""
                   loading="lazy"
                   onError={() => handleImageError(idx)}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </button>
             );

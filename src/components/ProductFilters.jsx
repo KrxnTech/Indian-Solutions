@@ -110,7 +110,6 @@ export default function ProductFilters({
                 type="button"
                 onClick={() => {
                   onCategoryChange(cat.slug);
-                  if (onSubCategoryChange) onSubCategoryChange('');
                   // Close mobile tray after selecting if user wishes
                   setMobileExpanded(false);
                 }}

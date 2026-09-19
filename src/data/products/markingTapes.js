@@ -7,8 +7,8 @@ export const MARKING_TAPES_PRODUCTS = [
     categorySlug: 'safety-marking-tapes',
     subCategory: 'Floor Tapes',
     brand: 'ISS',
-    image: '/assets/products/marking-tapes/floor-marking-tape.svg',
-    images: ['/assets/products/marking-tapes/floor-marking-tape.svg'],
+    image: '/assets/products/marking-tapes/pvc-floor-marking-tape.webp',
+    images: ['/assets/products/marking-tapes/pvc-floor-marking-tape.webp'],
     description:
       'High-adhesion vinyl floor marking tape formulated with aggressive rubber resin adhesive, designed for demarcating pedestrian walkways, forklift lanes, and storage zones in factories.',
     specifications: {
@@ -31,8 +31,8 @@ export const MARKING_TAPES_PRODUCTS = [
     categorySlug: 'safety-marking-tapes',
     subCategory: 'Barricade Tapes',
     brand: 'ISS',
-    image: '/assets/products/marking-tapes/barricade-tape.svg',
-    images: ['/assets/products/marking-tapes/barricade-tape.svg'],
+    image: '/assets/products/marking-tapes/barricade-caution-danger-tape.webp',
+    images: ['/assets/products/marking-tapes/barricade-caution-danger-tape.webp'],
     description:
       'Tear-resistant non-adhesive polyethylene film tape printed with bold "CAUTION - DO NOT ENTER" or "DANGER" lettering for cordoning off excavation sites and maintenance hazards.',
     specifications: {
@@ -54,8 +54,8 @@ export const MARKING_TAPES_PRODUCTS = [
     categorySlug: 'safety-marking-tapes',
     subCategory: 'Glow Tapes',
     brand: 'ISS',
-    image: '/assets/products/marking-tapes/glow-tape.svg',
-    images: ['/assets/products/marking-tapes/glow-tape.svg'],
+    image: '/assets/products/marking-tapes/photoluminescent-glow-in-dark-tape.webp',
+    images: ['/assets/products/marking-tapes/photoluminescent-glow-in-dark-tape.webp'],
     description:
       'Self-charging luminescent vinyl tape that absorbs ambient light and emits bright yellowish-green glow during power failures to guide workers along dark exit pathways.',
     specifications: {
@@ -77,8 +77,8 @@ export const MARKING_TAPES_PRODUCTS = [
     categorySlug: 'safety-marking-tapes',
     subCategory: 'Floor Tapes',
     brand: 'ISS',
-    image: '/assets/products/marking-tapes/zebra-tape.svg',
-    images: ['/assets/products/marking-tapes/zebra-tape.svg'],
+    image: '/assets/products/marking-tapes/zebra-hazard-warning-tape.webp',
+    images: ['/assets/products/marking-tapes/zebra-hazard-warning-tape.webp'],
     description:
       'High contrast diagonal striped yellow and black self-adhesive warning tape for highlighting overhead pinch points, low clearances, equipment bases, and trip hazard steps.',
     specifications: {

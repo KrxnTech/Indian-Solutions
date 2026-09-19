@@ -7,8 +7,8 @@ export const SPECIAL_PRODUCTS = [
     categorySlug: 'special-products',
     subCategory: 'Spill Control',
     brand: 'ISS',
-    image: '/assets/products/special-products/spill-kit.svg',
-    images: ['/assets/products/special-products/spill-kit.svg'],
+    image: '/assets/products/special-products/chemical-oil-spill-kit-50l.webp',
+    images: ['/assets/products/special-products/chemical-oil-spill-kit-50l.webp'],
     description:
       'Rapid emergency containment spill kit packed in durable weatherproof bag/drum, containing meltblown polypropylene absorbent pads, containment socks, disposal bags, and chemical gloves.',
     specifications: {
@@ -29,8 +29,8 @@ export const SPECIAL_PRODUCTS = [
     categorySlug: 'special-products',
     subCategory: 'Respiratory Apparatus',
     brand: 'ISS',
-    image: '/assets/products/special-products/eebd-apparatus.svg',
-    images: ['/assets/products/special-products/eebd-apparatus.svg'],
+    image: '/assets/products/special-products/emergency-escape-breathing-apparatus-eebd.webp',
+    images: ['/assets/products/special-products/emergency-escape-breathing-apparatus-eebd.webp'],
     description:
       'Positive pressure compressed air breathing escape device equipped with flame-resistant polyurethane hood and constant flow valve, supplying 15 minutes of breathable air to evacuate smoke or toxic gas zones.',
     specifications: {
@@ -52,8 +52,8 @@ export const SPECIAL_PRODUCTS = [
     categorySlug: 'special-products',
     subCategory: 'Safety Lighting',
     brand: 'ISS',
-    image: '/assets/products/special-products/safety-torch.svg',
-    images: ['/assets/products/special-products/safety-torch.svg'],
+    image: '/assets/products/special-products/explosion-proof-atex-safety-torch.webp',
+    images: ['/assets/products/special-products/explosion-proof-atex-safety-torch.webp'],
     description:
       'Heavy-duty intrinsically safe handheld flashlight designed for Zone 0, 1, and 2 hazardous combustible gas and dust environments in refineries, paint shops, and gas storage depots.',
     specifications: {

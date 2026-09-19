@@ -7,8 +7,8 @@ export const LOTO_PRODUCTS = [
     categorySlug: 'lockout-tagout',
     subCategory: 'Safety Padlocks',
     brand: 'ISS',
-    image: '/assets/products/loto/safety-padlock.svg',
-    images: ['/assets/products/loto/safety-padlock.svg'],
+    image: '/assets/products/loto/dielectric-safety-padlock-red.webp',
+    images: ['/assets/products/loto/dielectric-safety-padlock-red.webp'],
     description:
       'Engineered non-conductive Zenex/nylon body safety padlock with nylon/steel shackle and key-retaining cylinder, ensuring the key cannot be removed while the shackle is open.',
     specifications: {
@@ -31,8 +31,8 @@ export const LOTO_PRODUCTS = [
     categorySlug: 'lockout-tagout',
     subCategory: 'Lockout Hasps',
     brand: 'ISS',
-    image: '/assets/products/loto/lockout-hasp.svg',
-    images: ['/assets/products/loto/lockout-hasp.svg'],
+    image: '/assets/products/loto/steel-lockout-hasp-1-5inch.webp',
+    images: ['/assets/products/loto/steel-lockout-hasp-1-5inch.webp'],
     description:
       'High-tensile zinc plated steel lockout hasp with non-conductive vinyl-coated handle, accommodating up to 6 worker safety padlocks for multiple group energy isolation.',
     specifications: {
@@ -53,8 +53,8 @@ export const LOTO_PRODUCTS = [
     categorySlug: 'lockout-tagout',
     subCategory: 'Electrical Lockouts',
     brand: 'ISS',
-    image: '/assets/products/loto/mcb-lockout.svg',
-    images: ['/assets/products/loto/mcb-lockout.svg'],
+    image: '/assets/products/loto/universal-mcb-circuit-breaker-lockout.webp',
+    images: ['/assets/products/loto/universal-mcb-circuit-breaker-lockout.webp'],
     description:
       'Thumbscrew-activated universal miniature circuit breaker lockout that securely clamps onto single-pole and multi-pole breaker toggles without needing tools.',
     specifications: {
@@ -75,8 +75,8 @@ export const LOTO_PRODUCTS = [
     categorySlug: 'lockout-tagout',
     subCategory: 'Valve Lockouts',
     brand: 'ISS',
-    image: '/assets/products/loto/ball-valve-lockout.svg',
-    images: ['/assets/products/loto/ball-valve-lockout.svg'],
+    image: '/assets/products/loto/adjustable-ball-valve-lockout.webp',
+    images: ['/assets/products/loto/adjustable-ball-valve-lockout.webp'],
     description:
       'Two-piece adjustable polyurethane valve cover that locks over ball valve handles in the OFF (closed) position to prevent accidental line pressurization during maintenance.',
     specifications: {
@@ -96,8 +96,8 @@ export const LOTO_PRODUCTS = [
     categorySlug: 'lockout-tagout',
     subCategory: 'Lockout Stations',
     brand: 'ISS',
-    image: '/assets/products/loto/loto-station.svg',
-    images: ['/assets/products/loto/loto-station.svg'],
+    image: '/assets/products/loto/wall-mounted-group-loto-station.webp',
+    images: ['/assets/products/loto/wall-mounted-group-loto-station.webp'],
     description:
       'High-impact acrylic central master lockout station providing organized shadow storage for safety padlocks, hasps, tags, cable ties, and lockout devices in maintenance control rooms.',
     specifications: {

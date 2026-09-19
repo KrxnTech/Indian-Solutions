@@ -7,8 +7,8 @@ export const FIRST_AID_PRODUCTS = [
     categorySlug: 'first-aid-rescue',
     subCategory: 'First Aid Kits',
     brand: 'ISS',
-    image: '/assets/products/first-aid/first-aid-box.svg',
-    images: ['/assets/products/first-aid/first-aid-box.svg'],
+    image: '/assets/products/first-aid/industrial-metal-first-aid-box.webp',
+    images: ['/assets/products/first-aid/industrial-metal-first-aid-box.webp'],
     description:
       'Wall-mountable powder coated metal medicine cabinet compartmentalized and stocked with industrial trauma first aid medicines, sterile burn dressings, antiseptic lotions, and splints.',
     specifications: {
@@ -29,8 +29,8 @@ export const FIRST_AID_PRODUCTS = [
     categorySlug: 'first-aid-rescue',
     subCategory: 'Eye Wash & Showers',
     brand: 'ISS',
-    image: '/assets/products/first-aid/combination-shower.svg',
-    images: ['/assets/products/first-aid/combination-shower.svg'],
+    image: '/assets/products/first-aid/combination-eyewash-drench-shower-station.webp',
+    images: ['/assets/products/first-aid/combination-eyewash-drench-shower-station.webp'],
     description:
       'Floor-mounted stainless steel combination safety station featuring an overhead emergency drench shower and dual aerated eye/face wash basin actuated by pull rod or push plate.',
     specifications: {
@@ -51,8 +51,8 @@ export const FIRST_AID_PRODUCTS = [
     categorySlug: 'first-aid-rescue',
     subCategory: 'Eye Wash & Showers',
     brand: 'ISS',
-    image: '/assets/products/first-aid/portable-eyewash.svg',
-    images: ['/assets/products/first-aid/portable-eyewash.svg'],
+    image: '/assets/products/first-aid/portable-gravity-fed-eyewash-unit.webp',
+    images: ['/assets/products/first-aid/portable-gravity-fed-eyewash-unit.webp'],
     description:
       'Self-contained mobile emergency eyewash station made of polyethylene that operates via gravity when pull-down tray is opened, requiring no continuous plumbed water connection.',
     specifications: {
@@ -73,8 +73,8 @@ export const FIRST_AID_PRODUCTS = [
     categorySlug: 'first-aid-rescue',
     subCategory: 'Rescue Equipment',
     brand: 'ISS',
-    image: '/assets/products/first-aid/rescue-stretcher.svg',
-    images: ['/assets/products/first-aid/rescue-stretcher.svg'],
+    image: '/assets/products/first-aid/foldable-canvas-emergency-stretcher.webp',
+    images: ['/assets/products/first-aid/foldable-canvas-emergency-stretcher.webp'],
     description:
       'Lightweight high-strength aluminum alloy collapsible pole stretcher with water-resistant PVC/canvas bed and restraint straps for casualty evacuation in industrial emergencies.',
     specifications: {

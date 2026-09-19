@@ -7,8 +7,8 @@ export const EYE_PROTECTION_PRODUCTS = [
     categorySlug: 'eye-protection',
     subCategory: 'Safety Glasses',
     brand: 'ISS',
-    image: '/assets/products/eye-protection/clear-spectacles.svg',
-    images: ['/assets/products/eye-protection/clear-spectacles.svg'],
+    image: '/assets/products/eye-protection/wrap-around-clear-safety-spectacles.webp',
+    images: ['/assets/products/eye-protection/wrap-around-clear-safety-spectacles.webp'],
     description:
       'Frameless lightweight safety glasses featuring a single piece panoramic curved polycarbonate lens with integrated side shields, anti-scratch hard coat, and 99.9% UV filtration.',
     specifications: {
@@ -30,8 +30,8 @@ export const EYE_PROTECTION_PRODUCTS = [
     categorySlug: 'eye-protection',
     subCategory: 'Safety Goggles',
     brand: 'ISS',
-    image: '/assets/products/eye-protection/splash-goggles.svg',
-    images: ['/assets/products/eye-protection/splash-goggles.svg'],
+    image: '/assets/products/eye-protection/chemical-splash-indirect-vent-goggles.webp',
+    images: ['/assets/products/eye-protection/chemical-splash-indirect-vent-goggles.webp'],
     description:
       'Soft flexible PVC body safety goggles with indirect angled ventilation caps that prevent chemical droplets and liquid splashes from entering the eye chamber while maintaining airflow.',
     specifications: {
@@ -52,8 +52,8 @@ export const EYE_PROTECTION_PRODUCTS = [
     categorySlug: 'eye-protection',
     subCategory: 'Safety Glasses',
     brand: 'ISS',
-    image: '/assets/products/eye-protection/otg-spectacles.svg',
-    images: ['/assets/products/eye-protection/otg-spectacles.svg'],
+    image: '/assets/products/eye-protection/over-the-glass-otg-spectacles.webp',
+    images: ['/assets/products/eye-protection/over-the-glass-otg-spectacles.webp'],
     description:
       'Wide profile safety spectacles engineered to fit comfortably over standard prescription eyeglasses for plant visitors, supervisors, and laboratory personnel.',
     specifications: {
@@ -73,8 +73,8 @@ export const EYE_PROTECTION_PRODUCTS = [
     categorySlug: 'eye-protection',
     subCategory: 'Welding Goggles',
     brand: 'ISS',
-    image: '/assets/products/eye-protection/welding-goggles.svg',
-    images: ['/assets/products/eye-protection/welding-goggles.svg'],
+    image: '/assets/products/eye-protection/flip-up-gas-welding-goggles.webp',
+    images: ['/assets/products/eye-protection/flip-up-gas-welding-goggles.webp'],
     description:
       'Dual round 50mm lens gas cutting goggles featuring a flip-up front carrying dark Shade 5 welding glass and stationary clear polycarbonate inner lenses for inspection.',
     specifications: {

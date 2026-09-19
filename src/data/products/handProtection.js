@@ -7,8 +7,8 @@ export const HAND_PROTECTION_PRODUCTS = [
     categorySlug: 'hand-protection',
     subCategory: 'Chemical Gloves',
     brand: 'ISS',
-    image: '/assets/products/hand-protection/nitrile-gloves.svg',
-    images: ['/assets/products/hand-protection/nitrile-gloves.svg'],
+    image: '/assets/products/hand-protection/nitrile-chemical-resistant-gloves.webp',
+    images: ['/assets/products/hand-protection/nitrile-chemical-resistant-gloves.webp'],
     description:
       'Unsupported 15 mil green nitrile flock-lined gloves providing exceptional resistance to aromatic solvents, petroleum oils, acids, caustics, and animal fats with diamond grip palm.',
     specifications: {
@@ -31,8 +31,8 @@ export const HAND_PROTECTION_PRODUCTS = [
     categorySlug: 'hand-protection',
     subCategory: 'Mechanical Gloves',
     brand: 'ISS',
-    image: '/assets/products/hand-protection/cut-resistant-gloves.svg',
-    images: ['/assets/products/hand-protection/cut-resistant-gloves.svg'],
+    image: '/assets/products/hand-protection/cut-resistant-level-5-pu-gloves.webp',
+    images: ['/assets/products/hand-protection/cut-resistant-level-5-pu-gloves.webp'],
     description:
       'Seamless 13-gauge High Performance Polyethylene (HPPE) cut-resistant knitted shell with flexible polyurethane palm coating for sharp metal sheet handling, glass cutting, and blade protection.',
     specifications: {
@@ -53,8 +53,8 @@ export const HAND_PROTECTION_PRODUCTS = [
     categorySlug: 'hand-protection',
     subCategory: 'Welding Gloves',
     brand: 'ISS',
-    image: '/assets/products/hand-protection/welding-gloves.svg',
-    images: ['/assets/products/hand-protection/welding-gloves.svg'],
+    image: '/assets/products/hand-protection/leather-welding-gauntlet-gloves.webp',
+    images: ['/assets/products/hand-protection/leather-welding-gauntlet-gloves.webp'],
     description:
       'Heavy-duty 14-inch chrome tanned split leather welding gauntlets with soft fleece thermal inner lining and welted seams stitched with heat-resistant Kevlar thread.',
     specifications: {
@@ -75,8 +75,8 @@ export const HAND_PROTECTION_PRODUCTS = [
     categorySlug: 'hand-protection',
     subCategory: 'Electrical Gloves',
     brand: 'ISS',
-    image: '/assets/products/hand-protection/electrical-gloves.svg',
-    images: ['/assets/products/hand-protection/electrical-gloves.svg'],
+    image: '/assets/products/hand-protection/electrical-insulating-rubber-gloves.webp',
+    images: ['/assets/products/hand-protection/electrical-insulating-rubber-gloves.webp'],
     description:
       'Dielectric natural rubber electrical safety gloves designed for electricians and substation technicians working near live voltage panels and power distribution networks.',
     specifications: {
@@ -97,8 +97,8 @@ export const HAND_PROTECTION_PRODUCTS = [
     categorySlug: 'hand-protection',
     subCategory: 'General Handling',
     brand: 'ISS',
-    image: '/assets/products/hand-protection/dotted-gloves.svg',
-    images: ['/assets/products/hand-protection/dotted-gloves.svg'],
+    image: '/assets/products/hand-protection/cotton-knitted-pvc-dotted-gloves.webp',
+    images: ['/assets/products/hand-protection/cotton-knitted-pvc-dotted-gloves.webp'],
     description:
       'Seamless 7-gauge blended cotton knitted gloves featuring anti-skid PVC micro-dots on palm and fingers for material handling, warehouse logistics, and assembly lines.',
     specifications: {

@@ -7,8 +7,8 @@ export const FACE_PROTECTION_PRODUCTS = [
     categorySlug: 'face-protection',
     subCategory: 'Face Shields',
     brand: 'ISS',
-    image: '/assets/products/face-protection/face-shield-browguard.svg',
-    images: ['/assets/products/face-protection/face-shield-browguard.svg'],
+    image: '/assets/products/face-protection/polycarbonate-face-shield-browguard.webp',
+    images: ['/assets/products/face-protection/polycarbonate-face-shield-browguard.webp'],
     description:
       'Full facial protection system consisting of a high-impact ABS browguard with wheel-ratchet headband and optical grade clear polycarbonate visor (8x15 inch) for grinding and chemical splashes.',
     specifications: {
@@ -30,8 +30,8 @@ export const FACE_PROTECTION_PRODUCTS = [
     categorySlug: 'face-protection',
     subCategory: 'Welding Shields',
     brand: 'ISS',
-    image: '/assets/products/face-protection/welding-helmet.svg',
-    images: ['/assets/products/face-protection/welding-helmet.svg'],
+    image: '/assets/products/face-protection/flip-up-welding-helmet.webp',
+    images: ['/assets/products/face-protection/flip-up-welding-helmet.webp'],
     description:
       'Heavy-duty polypropylene welding hand/head shield with flip-up filter lens window allowing clear vision during chipping and inspection without taking off the helmet.',
     specifications: {
@@ -52,8 +52,8 @@ export const FACE_PROTECTION_PRODUCTS = [
     categorySlug: 'face-protection',
     subCategory: 'Face Shields',
     brand: 'ISS',
-    image: '/assets/products/face-protection/helmet-mounted-visor.svg',
-    images: ['/assets/products/face-protection/helmet-mounted-visor.svg'],
+    image: '/assets/products/face-protection/helmet-mountable-chemical-visor.webp',
+    images: ['/assets/products/face-protection/helmet-mountable-chemical-visor.webp'],
     description:
       'Universal spring-loaded aluminum/plastic carrier bracket that mounts onto standard industrial safety helmets to hold interchangeable clear or tinted face visors.',
     specifications: {

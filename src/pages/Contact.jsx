@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
+import RevealOnScroll from '../components/RevealOnScroll';
 import { COMPANY_INFO } from '../data/company';
 import { ISS_SERVICES } from '../data/services';
 import { PRODUCT_CATEGORIES } from '../data/categories';
@@ -33,16 +34,18 @@ export default function Contact() {
   return (
     <div className="py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Direct Inquiries"
-          title="Contact Indian Safety Solution (ISS)"
-          description="Connect with our sales and technical team in Kalol, Gujarat to request product catalogues, project estimations, or bulk safety equipment quotations."
-          align="center"
-        />
+        <RevealOnScroll>
+          <SectionHeading
+            badge="Direct Inquiries"
+            title="Contact Indian Safety Solution (ISS)"
+            description="Connect with our sales and technical team in Kalol, Gujarat to request product catalogues, project estimations, or bulk safety equipment quotations."
+            align="center"
+          />
+        </RevealOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column: Authentic Client Contact Information */}
-          <div className="lg:col-span-5 space-y-6">
+          <RevealOnScroll delay={0} className="lg:col-span-5 space-y-6">
             <div className="bg-[#031B33] text-white rounded-2xl p-6 sm:p-8 border border-slate-700 space-y-6">
               <div>
                 <span className="text-xs font-heading font-semibold uppercase tracking-wider text-[#FFC400]">
@@ -143,10 +146,10 @@ export default function Contact() {
                 <span>Supplying industrial safety products &amp; fire fighting services across Gujarat and India.</span>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
 
           {/* Right Column: Corporate Enquiry Form */}
-          <div className="lg:col-span-7">
+          <RevealOnScroll delay={80} className="lg:col-span-7">
             <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xs">
               <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#062A4F] mb-1">
                 Request a Corporate Quotation
@@ -327,37 +330,39 @@ export default function Contact() {
                 </form>
               )}
             </div>
-          </div>
+          </RevealOnScroll>
         </div>
 
         {/* Location Note / Physical Directions */}
-        <div className="mt-12 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-[#062A4F]/5 text-[#062A4F] flex items-center justify-center flex-shrink-0">
-              <MapPin className="w-6 h-6 text-[#D71920]" />
+        <RevealOnScroll className="mt-12">
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-[#062A4F]/5 text-[#062A4F] flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-[#D71920]" />
+              </div>
+              <div>
+                <h4 className="font-heading font-bold text-base text-[#062A4F]">
+                  Location: Hotel Amiras Compound, Kalol, Gujarat
+                </h4>
+                <p className="text-xs sm:text-sm text-[#64748B] mt-0.5">
+                  Situated along the Ahmedabad - Mehsana Highway in Kalol, Gandhinagar district, allowing swift logistics and on-site access across Gujarat's industrial corridors.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-heading font-bold text-base text-[#062A4F]">
-                Location: Hotel Amiras Compound, Kalol, Gujarat
-              </h4>
-              <p className="text-xs sm:text-sm text-[#64748B] mt-0.5">
-                Situated along the Ahmedabad - Mehsana Highway in Kalol, Gandhinagar district, allowing swift logistics and on-site access across Gujarat's industrial corridors.
-              </p>
+            <div className="flex-shrink-0">
+              <Button
+                href={`https://www.google.com/maps/search/?api=1&query=Hotel+Amiras+Compound+Ahmedabad+Mehsana+Highway+Kalol+Gandhinagar+Gujarat+382729`}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outline"
+                size="md"
+                icon={Globe}
+              >
+                Open in Google Maps
+              </Button>
             </div>
           </div>
-          <div className="flex-shrink-0">
-            <Button
-              href={`https://www.google.com/maps/search/?api=1&query=Hotel+Amiras+Compound+Ahmedabad+Mehsana+Highway+Kalol+Gandhinagar+Gujarat+382729`}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-              size="md"
-              icon={Globe}
-            >
-              Open in Google Maps
-            </Button>
-          </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </div>
   );

@@ -7,8 +7,8 @@ export const HEAD_PROTECTION_PRODUCTS = [
     categorySlug: 'head-protection',
     subCategory: 'Safety Helmets',
     brand: 'ISS',
-    image: '/assets/products/head-protection/ratchet-helmet.svg',
-    images: ['/assets/products/head-protection/ratchet-helmet.svg'],
+    image: '/assets/products/head-protection/industrial-safety-helmet-ratchet.webp',
+    images: ['/assets/products/head-protection/industrial-safety-helmet-ratchet.webp'],
     description:
       'High-density polyethylene (HDPE) shell safety helmet equipped with 6-point textile cradle suspension and fast-turn ratchet adjustment knob for construction and plant protection.',
     specifications: {
@@ -32,8 +32,8 @@ export const HEAD_PROTECTION_PRODUCTS = [
     categorySlug: 'head-protection',
     subCategory: 'Safety Helmets',
     brand: 'ISS',
-    image: '/assets/products/head-protection/ventilated-helmet.svg',
-    images: ['/assets/products/head-protection/ventilated-helmet.svg'],
+    image: '/assets/products/head-protection/ventilated-safety-helmet-pinlock.webp',
+    images: ['/assets/products/head-protection/ventilated-safety-helmet-pinlock.webp'],
     description:
       'Aerodynamically styled ventilated safety helmet with top air circulation vents to reduce internal heat buildup in hot plant conditions, fitted with manual pin-lock headband.',
     specifications: {
@@ -54,8 +54,8 @@ export const HEAD_PROTECTION_PRODUCTS = [
     categorySlug: 'head-protection',
     subCategory: 'Bump Caps',
     brand: 'ISS',
-    image: '/assets/products/head-protection/bump-cap.svg',
-    images: ['/assets/products/head-protection/bump-cap.svg'],
+    image: '/assets/products/head-protection/lightweight-industrial-bump-cap.webp',
+    images: ['/assets/products/head-protection/lightweight-industrial-bump-cap.webp'],
     description:
       'Sporty baseball cap design encasing a protective ABS inner shell with foam padding to safeguard against scrapes, bumps, and scalp lacerations in confined work zones.',
     specifications: {
@@ -76,8 +76,8 @@ export const HEAD_PROTECTION_PRODUCTS = [
     categorySlug: 'head-protection',
     subCategory: 'Safety Helmets',
     brand: 'ISS',
-    image: '/assets/products/head-protection/electrical-helmet.svg',
-    images: ['/assets/products/head-protection/electrical-helmet.svg'],
+    image: '/assets/products/head-protection/electrical-resistant-safety-helmet.webp',
+    images: ['/assets/products/head-protection/electrical-resistant-safety-helmet.webp'],
     description:
       'Solid crown unventilated safety helmet designed to offer dielectric protection against accidental electrical contact in power utilities, switchyards, and sub-stations.',
     specifications: {

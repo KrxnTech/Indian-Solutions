@@ -7,8 +7,8 @@ export const TRAFFIC_SAFETY_PRODUCTS = [
     categorySlug: 'traffic-safety',
     subCategory: 'Traffic Cones',
     brand: 'ISS',
-    image: '/assets/products/traffic-safety/traffic-cone.svg',
-    images: ['/assets/products/traffic-safety/traffic-cone.svg'],
+    image: '/assets/products/traffic-safety/reflective-traffic-cone-750mm.webp',
+    images: ['/assets/products/traffic-safety/reflective-traffic-cone-750mm.webp'],
     description:
       'High-visibility fluorescent orange flexible PVC traffic cone with weighted heavy black rubber base preventing tip-over from vehicle drafts, fitted with high-intensity reflective sleeve.',
     specifications: {
@@ -30,8 +30,8 @@ export const TRAFFIC_SAFETY_PRODUCTS = [
     categorySlug: 'traffic-safety',
     subCategory: 'Barriers',
     brand: 'ISS',
-    image: '/assets/products/traffic-safety/road-barrier.svg',
-    images: ['/assets/products/traffic-safety/road-barrier.svg'],
+    image: '/assets/products/traffic-safety/water-filled-road-barrier.webp',
+    images: ['/assets/products/traffic-safety/water-filled-road-barrier.webp'],
     description:
       'Rotationally molded UV-stabilized heavy polyethylene interlocking traffic barricade that can be ballasted with water or sand for temporary perimeter security and road diversions.',
     specifications: {
@@ -53,8 +53,8 @@ export const TRAFFIC_SAFETY_PRODUCTS = [
     categorySlug: 'traffic-safety',
     subCategory: 'Speed Bumps',
     brand: 'ISS',
-    image: '/assets/products/traffic-safety/speed-bump.svg',
-    images: ['/assets/products/traffic-safety/speed-bump.svg'],
+    image: '/assets/products/traffic-safety/rubber-speed-bump-hump.webp',
+    images: ['/assets/products/traffic-safety/rubber-speed-bump-hump.webp'],
     description:
       'Segmented heavy-duty vulcanized rubber speed hump sections with molded high-visibility yellow reflective beads and textured anti-skid surface for factory roads and parking zones.',
     specifications: {
@@ -75,8 +75,8 @@ export const TRAFFIC_SAFETY_PRODUCTS = [
     categorySlug: 'traffic-safety',
     subCategory: 'Convex Mirrors',
     brand: 'ISS',
-    image: '/assets/products/traffic-safety/convex-mirror.svg',
-    images: ['/assets/products/traffic-safety/convex-mirror.svg'],
+    image: '/assets/products/traffic-safety/outdoor-convex-mirror-800mm.webp',
+    images: ['/assets/products/traffic-safety/outdoor-convex-mirror-800mm.webp'],
     description:
       'Unbreakable wide-angle curved polycarbonate convex mirror equipped with UV-resistant orange ABS frame and heavy pole-mounting bracket to eliminate blind spots at intersections.',
     specifications: {

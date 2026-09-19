@@ -7,8 +7,8 @@ export const BODY_PROTECTION_PRODUCTS = [
     categorySlug: 'body-protection',
     subCategory: 'Coveralls',
     brand: 'ISS',
-    image: '/assets/products/body-protection/cotton-boiler-suit.svg',
-    images: ['/assets/products/body-protection/cotton-boiler-suit.svg'],
+    image: '/assets/products/body-protection/heavy-cotton-industrial-boiler-suit.webp',
+    images: ['/assets/products/body-protection/heavy-cotton-industrial-boiler-suit.webp'],
     description:
       'Durable 100% cotton drill industrial boiler suit featuring two-way heavy-duty brass zipper, multiple utility pockets, elasticated back waist, and reinforced stress points.',
     specifications: {
@@ -30,8 +30,8 @@ export const BODY_PROTECTION_PRODUCTS = [
     categorySlug: 'body-protection',
     subCategory: 'High-Vis Apparel',
     brand: 'ISS',
-    image: '/assets/products/body-protection/high-vis-jacket.svg',
-    images: ['/assets/products/body-protection/high-vis-jacket.svg'],
+    image: '/assets/products/body-protection/high-visibility-reflective-jacket.webp',
+    images: ['/assets/products/body-protection/high-visibility-reflective-jacket.webp'],
     description:
       'Fluorescent polyester mesh safety jacket equipped with 2-inch wide high-intensity micro-prismatic glass bead retro-reflective tapes for daytime and nighttime visibility.',
     specifications: {
@@ -53,8 +53,8 @@ export const BODY_PROTECTION_PRODUCTS = [
     categorySlug: 'body-protection',
     subCategory: 'Chemical Protection',
     brand: 'ISS',
-    image: '/assets/products/body-protection/chemical-splash-suit.svg',
-    images: ['/assets/products/body-protection/chemical-splash-suit.svg'],
+    image: '/assets/products/body-protection/chemical-splash-protective-pvc-suit.webp',
+    images: ['/assets/products/body-protection/chemical-splash-protective-pvc-suit.webp'],
     description:
       'Two-piece heavy PVC coated polyester chemical protection suit (Jacket with hood and bib trousers) designed for chemical handling, acid cleaning, and hazardous liquid transfer.',
     specifications: {
@@ -75,8 +75,8 @@ export const BODY_PROTECTION_PRODUCTS = [
     categorySlug: 'body-protection',
     subCategory: 'Aprons',
     brand: 'ISS',
-    image: '/assets/products/body-protection/welding-apron.svg',
-    images: ['/assets/products/body-protection/welding-apron.svg'],
+    image: '/assets/products/body-protection/leather-welding-apron.webp',
+    images: ['/assets/products/body-protection/leather-welding-apron.webp'],
     description:
       'One-piece premium chrome split cowhide leather apron providing thermal shield protection against flying sparks, spatter, and radiant heat during arc and gas welding.',
     specifications: {
@@ -97,8 +97,8 @@ export const BODY_PROTECTION_PRODUCTS = [
     categorySlug: 'body-protection',
     subCategory: 'Coveralls',
     brand: 'ISS',
-    image: '/assets/products/body-protection/fr-coverall.svg',
-    images: ['/assets/products/body-protection/fr-coverall.svg'],
+    image: '/assets/products/body-protection/flame-retardant-fr-cotton-coverall.webp',
+    images: ['/assets/products/body-protection/flame-retardant-fr-cotton-coverall.webp'],
     description:
       'Treated flame-retardant industrial coverall designed to protect workers against flash fire, electrical arc, and molten metal splashes in petrochemical plants.',
     specifications: {

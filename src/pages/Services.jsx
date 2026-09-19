@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
 import { Card, CardHeader, CardBody, CardFooter } from '../components/Card';
+import RevealOnScroll from '../components/RevealOnScroll';
 import { ISS_SERVICES } from '../data/services';
 import { CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 import { COMPANY_INFO } from '../data/company';
@@ -10,19 +11,26 @@ export default function Services() {
   return (
     <div className="py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Our Services"
-          title="Industrial Safety & Fire Protection Services"
-          description="Comprehensive overview of the eight documented service areas provided by Indian Safety Solution, spanning equipment supply, turnkey project execution, and workplace compliance."
-          align="center"
-        />
+        <RevealOnScroll>
+          <SectionHeading
+            badge="Our Services"
+            title="Industrial Safety & Fire Protection Services"
+            description="Comprehensive overview of the eight documented service areas provided by Indian Safety Solution, spanning equipment supply, turnkey project execution, and workplace compliance."
+            align="center"
+          />
+        </RevealOnScroll>
 
         {/* 8 Documented Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {ISS_SERVICES.map((service) => {
+          {ISS_SERVICES.map((service, idx) => {
             const Icon = service.icon;
             return (
-              <Card key={service.id} className="h-full">
+              <RevealOnScroll
+                key={service.id}
+                delay={Math.min(idx * 60, 240)}
+                className="h-full"
+              >
+                <Card className="h-full">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 rounded-lg bg-[#062A4F]/10 flex items-center justify-center text-[#062A4F] group-hover:bg-[#062A4F] group-hover:text-white transition-colors duration-200">
@@ -70,11 +78,13 @@ export default function Services() {
                   </Button>
                 </CardFooter>
               </Card>
-            );
-          })}
-        </div>
+            </RevealOnScroll>
+          );
+        })}
+      </div>
 
-        {/* Project & Execution Advisory Banner */}
+      {/* Project & Execution Advisory Banner */}
+      <RevealOnScroll>
         <div className="bg-[#031B33] text-white p-8 sm:p-10 rounded-2xl border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <span className="text-xs font-heading font-semibold uppercase tracking-wider text-[#FFC400]">
@@ -103,7 +113,8 @@ export default function Services() {
             </Button>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </div>
-  );
+  </div>
+);
 }

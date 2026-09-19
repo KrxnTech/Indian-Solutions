@@ -7,8 +7,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'ABC Powder',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/abc-extinguisher.svg',
-    images: ['/assets/products/fire-extinguishers/abc-extinguisher.svg'],
+    image: '/assets/products/fire-extinguishers/abc-dry-powder-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/abc-dry-powder-fire-extinguisher.webp'],
     description:
       'Multi-purpose stored pressure fire extinguisher charged with monoammonium phosphate (MAP) dry chemical powder, engineered for Class A (wood, paper, textiles), Class B (flammable liquids), Class C (gases), and energized electrical fires.',
     specifications: {
@@ -32,8 +32,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'CO2',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/co2-extinguisher.svg',
-    images: ['/assets/products/fire-extinguishers/co2-extinguisher.svg'],
+    image: '/assets/products/fire-extinguishers/co2-portable-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/co2-portable-fire-extinguisher.webp'],
     description:
       'Seamless steel/aluminum alloy body carbon dioxide fire extinguisher fitted with non-conductive discharge horn, ideal for electrical control panels, server rooms, and laboratory equipment without leaving corrosive residue.',
     specifications: {
@@ -56,8 +56,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'Clean Agent',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/clean-agent-extinguisher.svg',
-    images: ['/assets/products/fire-extinguishers/clean-agent-extinguisher.svg'],
+    image: '/assets/products/fire-extinguishers/clean-agent-gas-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/clean-agent-gas-fire-extinguisher.webp'],
     description:
       'Zero ozone depletion clean chemical agent extinguisher that discharges as an invisible, non-conductive, residue-free gas protecting delicate telecom networks, data centers, and semiconductor plants.',
     specifications: {
@@ -78,8 +78,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'Foam',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/foam-extinguisher.svg',
-    images: ['/assets/products/fire-extinguishers/foam-extinguisher.svg'],
+    image: '/assets/products/fire-extinguishers/mechanical-foam-afff-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/mechanical-foam-afff-fire-extinguisher.webp'],
     description:
       'Aqueous Film Forming Foam (AFFF) extinguisher designed to form a cohesive blanketing film over burning liquid fuels, smothering oxygen and preventing reignition in paint shops and oil stores.',
     specifications: {
@@ -100,8 +100,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'Water',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/water-extinguisher.svg',
-    images: ['/assets/products/fire-extinguishers/water-extinguisher.svg'],
+    image: '/assets/products/fire-extinguishers/water-stored-pressure-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/water-stored-pressure-fire-extinguisher.webp'],
     description:
       'High capacity 9-liter stored pressure water fire extinguisher providing rapid penetration and cooling effect for standard deep-seated Class A combustible fires (paper, wood, cardboard, textiles).',
     specifications: {
@@ -122,8 +122,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'ABC Powder',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/modular-extinguisher.svg',
-    images: ['/assets/products/fire-extinguishers/modular-extinguisher.svg'],
+    image: '/assets/products/fire-extinguishers/modular-automatic-abc-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/modular-automatic-abc-fire-extinguisher.webp'],
     description:
       'Unattended automatic overhead modular fire extinguisher equipped with temperature-sensitive thermo-bulb (68°C / 79°C) that bursts automatically upon sensing heat to flood localized enclosures.',
     specifications: {
@@ -144,8 +144,8 @@ export const FIRE_EXTINGUISHER_PRODUCTS = [
     categorySlug: 'fire-extinguisher-solutions',
     subCategory: 'CO2',
     brand: 'ISS',
-    image: '/assets/products/fire-extinguishers/co2-trolley.svg',
-    images: ['/assets/products/fire-extinguishers/co2-trolley.svg'],
+    image: '/assets/products/fire-extinguishers/co2-wheeled-trolley-fire-extinguisher.webp',
+    images: ['/assets/products/fire-extinguishers/co2-wheeled-trolley-fire-extinguisher.webp'],
     description:
       'Heavy-duty dual cylinder mobile wheeled trolley unit containing 22.5kg of CO2 gas with 5-meter braided high-pressure discharge hose for industrial transformer yards and bulk storage.',
     specifications: {

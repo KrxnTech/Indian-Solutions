@@ -7,8 +7,8 @@ export const FIRE_DOOR_PRODUCTS = [
     categorySlug: 'fire-doors',
     subCategory: 'Fire Rated Steel Doors',
     brand: 'ISS',
-    image: '/assets/products/fire-doors/fire-steel-door.svg',
-    images: ['/assets/products/fire-doors/fire-steel-door.svg'],
+    image: '/assets/products/fire-doors/fire-rated-steel-single-door.webp',
+    images: ['/assets/products/fire-doors/fire-rated-steel-single-door.webp'],
     description:
       'Insulated fire-rated galvanized steel single leaf door tested for 120/240 minutes integrity and thermal insulation, fitted with perimeter intumescent fire seals and panic exit hardware.',
     specifications: {
@@ -31,8 +31,8 @@ export const FIRE_DOOR_PRODUCTS = [
     categorySlug: 'fire-doors',
     subCategory: 'HMPS Non Fire Rated Doors',
     brand: 'ISS',
-    image: '/assets/products/fire-doors/hmps-door.svg',
-    images: ['/assets/products/fire-doors/hmps-door.svg'],
+    image: '/assets/products/fire-doors/hmps-non-fire-rated-double-door.webp',
+    images: ['/assets/products/fire-doors/hmps-non-fire-rated-double-door.webp'],
     description:
       'Hollow Metal Pressed Steel (HMPS) double door engineered for factory utility areas, electrical sub-stations, control rooms, and industrial warehouses requiring robust access control.',
     specifications: {
@@ -54,8 +54,8 @@ export const FIRE_DOOR_PRODUCTS = [
     categorySlug: 'fire-doors',
     subCategory: 'Shaft Doors',
     brand: 'ISS',
-    image: '/assets/products/fire-doors/shaft-door.svg',
-    images: ['/assets/products/fire-doors/shaft-door.svg'],
+    image: '/assets/products/fire-doors/shaft-access-door.webp',
+    images: ['/assets/products/fire-doors/shaft-access-door.webp'],
     description:
       'Flush mounted fire-resistant steel access panel for vertical plumbing and electrical duct risers, preventing smoke migration between building floors.',
     specifications: {
@@ -76,8 +76,8 @@ export const FIRE_DOOR_PRODUCTS = [
     categorySlug: 'fire-doors',
     subCategory: 'Clean Room Doors',
     brand: 'ISS',
-    image: '/assets/products/fire-doors/clean-room-door.svg',
-    images: ['/assets/products/fire-doors/clean-room-door.svg'],
+    image: '/assets/products/fire-doors/clean-room-airtight-door.webp',
+    images: ['/assets/products/fire-doors/clean-room-airtight-door.webp'],
     description:
       'Completely flush seamless pharmaceutical cleanroom door with flush double-glazed vision panel, magnetic drop-bottom seal, and food-grade antimicrobial finish.',
     specifications: {
@@ -99,8 +99,8 @@ export const FIRE_DOOR_PRODUCTS = [
     categorySlug: 'fire-doors',
     subCategory: 'Fire Rated Glazed Doors',
     brand: 'ISS',
-    image: '/assets/products/fire-doors/glazed-fire-door.svg',
-    images: ['/assets/products/fire-doors/glazed-fire-door.svg'],
+    image: '/assets/products/fire-doors/fire-rated-glazed-vision-door.webp',
+    images: ['/assets/products/fire-doors/fire-rated-glazed-vision-door.webp'],
     description:
       'Aesthetically elegant fire-rated steel door with large clear ceramic fire glass vision window, providing light transmission and visibility while preventing fire spread.',
     specifications: {
@@ -121,8 +121,8 @@ export const FIRE_DOOR_PRODUCTS = [
     categorySlug: 'fire-doors',
     subCategory: 'Fire Rated Acoustic Doors',
     brand: 'ISS',
-    image: '/assets/products/fire-doors/acoustic-door.svg',
-    images: ['/assets/products/fire-doors/acoustic-door.svg'],
+    image: '/assets/products/fire-doors/fire-rated-acoustic-door.webp',
+    images: ['/assets/products/fire-doors/fire-rated-acoustic-door.webp'],
     description:
       'Dual performance steel door engineered for both 120-minute fire resistance and high acoustic attenuation (STC 45 dB) for generator rooms, auditoriums, and test cells.',
     specifications: {

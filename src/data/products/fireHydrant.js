@@ -7,8 +7,8 @@ export const FIRE_HYDRANT_PRODUCTS = [
     categorySlug: 'fire-hydrant-system',
     subCategory: 'Hydrant Valves',
     brand: 'ISS',
-    image: '/assets/products/fire-hydrant/landing-valve.svg',
-    images: ['/assets/products/fire-hydrant/landing-valve.svg'],
+    image: '/assets/products/fire-hydrant/single-outlet-landing-valve.webp',
+    images: ['/assets/products/fire-hydrant/single-outlet-landing-valve.webp'],
     description:
       'Industrial oblique pattern landing valve designed for wet riser and pressurized hydrant systems, delivering controlled water stream via instantaneous female coupling.',
     specifications: {
@@ -30,8 +30,8 @@ export const FIRE_HYDRANT_PRODUCTS = [
     categorySlug: 'fire-hydrant-system',
     subCategory: 'Delivery Hoses',
     brand: 'ISS',
-    image: '/assets/products/fire-hydrant/rrl-hose.svg',
-    images: ['/assets/products/fire-hydrant/rrl-hose.svg'],
+    image: '/assets/products/fire-hydrant/reinforced-rubber-lined-fire-hose.webp',
+    images: ['/assets/products/fire-hydrant/reinforced-rubber-lined-fire-hose.webp'],
     description:
       'High-pressure circular woven synthetic polyester jacketed delivery hose with smooth vulcanized EPDM rubber inner lining for low friction loss during fire discharge operations.',
     specifications: {
@@ -54,8 +54,8 @@ export const FIRE_HYDRANT_PRODUCTS = [
     categorySlug: 'fire-hydrant-system',
     subCategory: 'Nozzles & Pipes',
     brand: 'ISS',
-    image: '/assets/products/fire-hydrant/branch-pipe.svg',
-    images: ['/assets/products/fire-hydrant/branch-pipe.svg'],
+    image: '/assets/products/fire-hydrant/short-branch-pipe-nozzle.webp',
+    images: ['/assets/products/fire-hydrant/short-branch-pipe-nozzle.webp'],
     description:
       'Heavy-duty gunmetal short branch pipe fitted with standard discharge nozzle to produce concentrated straight jet stream or fog spray for firefighting suppression.',
     specifications: {
@@ -76,8 +76,8 @@ export const FIRE_HYDRANT_PRODUCTS = [
     categorySlug: 'fire-hydrant-system',
     subCategory: 'Hose Reels',
     brand: 'ISS',
-    image: '/assets/products/fire-hydrant/hose-reel.svg',
-    images: ['/assets/products/fire-hydrant/hose-reel.svg'],
+    image: '/assets/products/fire-hydrant/first-aid-fire-hose-reel.webp',
+    images: ['/assets/products/fire-hydrant/first-aid-fire-hose-reel.webp'],
     description:
       'Wall-mounted 180-degree swinging type first aid hose reel drum holding 30 meters of reinforced thermoplastic PVC tubing with shut-off rotary spray jet nozzle for immediate first attack.',
     specifications: {

@@ -7,8 +7,8 @@ export const FALL_PROTECTION_PRODUCTS = [
     categorySlug: 'fall-protection',
     subCategory: 'Safety Harnesses',
     brand: 'ISS',
-    image: '/assets/products/fall-protection/safety-harness.svg',
-    images: ['/assets/products/fall-protection/safety-harness.svg'],
+    image: '/assets/products/fall-protection/full-body-safety-harness-dual-lanyard.webp',
+    images: ['/assets/products/fall-protection/full-body-safety-harness-dual-lanyard.webp'],
     description:
       'Ergonomic full-body safety harness made from high-tenacity 44mm polyester webbing with forged alloy steel dorsal attachment D-ring, adjustable thigh and chest straps, and integrated dual energy absorbing lanyard.',
     specifications: {
@@ -30,8 +30,8 @@ export const FALL_PROTECTION_PRODUCTS = [
     categorySlug: 'fall-protection',
     subCategory: 'Lanyards',
     brand: 'ISS',
-    image: '/assets/products/fall-protection/scaffold-lanyard.svg',
-    images: ['/assets/products/fall-protection/scaffold-lanyard.svg'],
+    image: '/assets/products/fall-protection/shock-absorbing-double-scaffold-lanyard.webp',
+    images: ['/assets/products/fall-protection/shock-absorbing-double-scaffold-lanyard.webp'],
     description:
       'Twin-leg forked safety lanyard with progressive tear-webbing energy absorber pouch and dual forged alloy steel scaffold hooks (55mm gate opening) for continuous 100% tie-off while climbing scaffolding.',
     specifications: {
@@ -52,8 +52,8 @@ export const FALL_PROTECTION_PRODUCTS = [
     categorySlug: 'fall-protection',
     subCategory: 'Fall Arresters',
     brand: 'ISS',
-    image: '/assets/products/fall-protection/fall-arrester-block.svg',
-    images: ['/assets/products/fall-protection/fall-arrester-block.svg'],
+    image: '/assets/products/fall-protection/self-retracting-lifeline-fall-arrester.webp',
+    images: ['/assets/products/fall-protection/self-retracting-lifeline-fall-arrester.webp'],
     description:
       'Inertia-locking mechanical fall arrester reel housing galvanized steel wire cable inside an impact-resistant polymer casing with centrifugal brake that locks instantly in event of a slip.',
     specifications: {
@@ -74,8 +74,8 @@ export const FALL_PROTECTION_PRODUCTS = [
     categorySlug: 'fall-protection',
     subCategory: 'Lifelines',
     brand: 'ISS',
-    image: '/assets/products/fall-protection/horizontal-lifeline.svg',
-    images: ['/assets/products/fall-protection/horizontal-lifeline.svg'],
+    image: '/assets/products/fall-protection/horizontal-lifeline-rope-tensioner.webp',
+    images: ['/assets/products/fall-protection/horizontal-lifeline-rope-tensioner.webp'],
     description:
       'Portable temporary horizontal lifeline system comprising 20-meter kernmantle rope, heavy-duty ratchet tensioning winch, and two anchor cross-arm straps for rooftop and girder walkways.',
     specifications: {

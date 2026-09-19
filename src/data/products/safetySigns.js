@@ -8,8 +8,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Emergency Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01001.svg',
-    images: ['/assets/products/safety-signs/sign-01001.svg'],
+    image: '/assets/products/safety-signs/assembly-point-sign-01001.webp',
+    images: ['/assets/products/safety-signs/assembly-point-sign-01001.webp'],
     description:
       'High-visibility green and white emergency evacuation assembly point sign board indicating the designated safe gathering area outside industrial facilities during an alarm.',
     specifications: {
@@ -32,8 +32,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Emergency Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01002.svg',
-    images: ['/assets/products/safety-signs/sign-01002.svg'],
+    image: '/assets/products/safety-signs/emergency-exit-sign-01002.webp',
+    images: ['/assets/products/safety-signs/emergency-exit-sign-01002.webp'],
     description:
       'Glow-in-the-dark escape route direction indicator board depicting the universal running man symbol and directional arrow pointing toward the nearest emergency egress door.',
     specifications: {
@@ -55,8 +55,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Fire Equipment Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01003.svg',
-    images: ['/assets/products/safety-signs/sign-01003.svg'],
+    image: '/assets/products/safety-signs/fire-extinguisher-location-sign-01003.webp',
+    images: ['/assets/products/safety-signs/fire-extinguisher-location-sign-01003.webp'],
     description:
       'High contrast red and white fire equipment identification board showing graphic flame and extinguisher symbol, mounted above manual fire extinguisher brackets.',
     specifications: {
@@ -78,8 +78,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Emergency Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01004.svg',
-    images: ['/assets/products/safety-signs/sign-01004.svg'],
+    image: '/assets/products/safety-signs/first-aid-post-sign-01004.webp',
+    images: ['/assets/products/safety-signs/first-aid-post-sign-01004.webp'],
     description:
       'Standardized green square safety sign with bold white first aid cross identifying the workplace medical cabinet, eyewash station, or first aid treatment room.',
     specifications: {
@@ -100,8 +100,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Mandatory Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01005.svg',
-    images: ['/assets/products/safety-signs/sign-01005.svg'],
+    image: '/assets/products/safety-signs/mandatory-ppe-sign-01005.webp',
+    images: ['/assets/products/safety-signs/mandatory-ppe-sign-01005.webp'],
     description:
       'Blue circle mandatory notice informing workers and contractors that safety helmet, goggles, and safety footwear must be worn before entering the plant floor.',
     specifications: {
@@ -123,8 +123,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Hazard Warning Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01006.svg',
-    images: ['/assets/products/safety-signs/sign-01006.svg'],
+    image: '/assets/products/safety-signs/danger-high-voltage-sign-01006.webp',
+    images: ['/assets/products/safety-signs/danger-high-voltage-sign-01006.webp'],
     description:
       'Yellow triangular hazard warning sign featuring skull and crossbones / lightning flash with bold red "DANGER - 415 VOLTS" for electrical distribution panels.',
     specifications: {
@@ -146,8 +146,8 @@ export const SAFETY_SIGN_PRODUCTS = [
     categorySlug: 'safety-sign-boards',
     subCategory: 'Prohibition Signs',
     brand: 'ISS',
-    image: '/assets/products/safety-signs/sign-01007.svg',
-    images: ['/assets/products/safety-signs/sign-01007.svg'],
+    image: '/assets/products/safety-signs/no-smoking-sign-01007.webp',
+    images: ['/assets/products/safety-signs/no-smoking-sign-01007.webp'],
     description:
       'Red prohibition circle with diagonal slash over burning cigarette and open flame, strictly enforced in flammable gas, chemical storage, and fueling depots.',
     specifications: {
