@@ -333,33 +333,79 @@ export default function Contact() {
           </RevealOnScroll>
         </div>
 
-        {/* Location Note / Physical Directions */}
-        <RevealOnScroll className="mt-12">
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#062A4F]/5 text-[#062A4F] flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-[#D71920]" />
+        {/* Location & Interactive Google Map Section */}
+        <RevealOnScroll className="mt-12" id="location-map">
+          <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+            {/* Header / Info bar above map */}
+            <div className="p-6 sm:p-8 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-slate-50/70">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#062A4F]/5 text-[#062A4F] flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-[#D71920]" />
+                </div>
+                <div>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-wider text-[#D71920] mb-1">
+                    <span>Google Maps Location</span>
+                  </div>
+                  <h4 className="font-heading font-bold text-lg sm:text-xl text-[#062A4F]">
+                    Visit Our Facility &amp; Head Office
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-2xl leading-relaxed">
+                    Hotel Amiras Compound, Ahmedabad - Mehsana Highway, near Chhatral Chokdi, GIDC Chhatral, Ahmedabad / Kalol, Gujarat 382729
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-heading font-bold text-base text-[#062A4F]">
-                  Location: Hotel Amiras Compound, Kalol, Gujarat
-                </h4>
-                <p className="text-xs sm:text-sm text-[#64748B] mt-0.5">
-                  Situated along the Ahmedabad - Mehsana Highway in Kalol, Gandhinagar district, allowing swift logistics and on-site access across Gujarat's industrial corridors.
-                </p>
+              <div className="flex-shrink-0 flex items-center gap-3">
+                <Button
+                  href="https://maps.google.com/?q=7CJR%2B874+Hotel+Amiras+Compound,+to,+Ahmedabad+-+Mehsana+Rd,+near+Chhatral,+Chokdi,+GIDC+Chhatral,+Gujarat+382729"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  size="md"
+                  icon={Globe}
+                >
+                  Open in Google Maps
+                </Button>
               </div>
             </div>
-            <div className="flex-shrink-0">
-              <Button
-                href={`https://www.google.com/maps/search/?api=1&query=Hotel+Amiras+Compound+Ahmedabad+Mehsana+Highway+Kalol+Gandhinagar+Gujarat+382729`}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="outline"
-                size="md"
-                icon={Globe}
-              >
-                Open in Google Maps
-              </Button>
+
+            {/* Embedded Google Map iframe */}
+            <div className="relative w-full h-[380px] sm:h-[450px] bg-slate-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.033045114586!2d72.4407044!3d23.28080929999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2489006d5a41%3A0x3168a1d650bf96ee!2s7CJR%2B874%20Hotel%20Amiras%20Compound%2C%20to%2C%20Ahmedabad%20-%20Mehsana%20Rd%2C%20near%20Chhatral%2C%20Chokdi%2C%20GIDC%20Chhatral%2C%20Ahmedabad%2C%20Chhatral%2C%20Gujarat%20382729!5e1!3m2!1sen!2sin!4v1789903132281!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Indian Safety Solution (ISS) Location Map - Hotel Amiras Compound, Chhatral, Kalol, Gujarat"
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Key Logistics & Travel Highlights strip */}
+            <div className="p-4 sm:p-6 bg-white border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+              <div className="flex items-start gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-[#D71920] mt-1.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-[#062A4F] font-semibold">Strategic Industrial Corridor</strong>
+                  <span className="text-[#64748B]">Immediate access to Ahmedabad - Mehsana Highway &amp; GIDC Chhatral</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-[#FFC400] mt-1.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-[#062A4F] font-semibold">Loading Dock &amp; Logistics</strong>
+                  <span className="text-[#64748B]">Equipped for bulk dispatch, heavy vehicles &amp; freight carriers</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-[#062A4F] font-semibold">Office Hours &amp; Visits</strong>
+                  <span className="text-[#64748B]">Monday – Saturday: 09:00 AM – 06:30 PM IST</span>
+                </div>
+              </div>
             </div>
           </div>
         </RevealOnScroll>

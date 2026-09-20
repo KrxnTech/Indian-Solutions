@@ -31,3 +31,12 @@ export const COMPANY_INFO = {
     'Safety Training & Documentation',
   ],
 };
+
+export function getWhatsAppUrl(customMessage) {
+  const cleanPhone = COMPANY_INFO.phonePrimary.replace(/[^0-9]/g, '');
+  const message = encodeURIComponent(
+    customMessage ||
+      `Hello ${COMPANY_INFO.name}, I am contacting you from your website. I would like to inquire about industrial safety products and fire protection services.`
+  );
+  return `https://wa.me/${cleanPhone}?text=${message}`;
+}

@@ -20,11 +20,14 @@ import { Card, CardHeader, CardBody, CardFooter } from '../components/Card';
 import HeroHeadline from '../components/HeroHeadline';
 import RevealOnScroll from '../components/RevealOnScroll';
 
-import { COMPANY_INFO } from '../data/company';
+import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
 import { ISS_SERVICES } from '../data/services';
 import { PRODUCT_CATEGORIES } from '../data/categories';
+import WhatsAppButton, { WhatsAppIcon } from '../components/WhatsAppButton';
 
 export default function Home() {
+  const whatsAppUrl = getWhatsAppUrl();
+
   // Documented industrial application scopes (no fabricated client statistics)
   const applicationEnvironments = [
     {
@@ -101,6 +104,17 @@ export default function Home() {
                   className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:border-white"
                 >
                   Get a Quote
+                </Button>
+                <Button
+                  href={whatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  size="lg"
+                  className="bg-emerald-600/20 border-emerald-500/50 text-emerald-300 hover:bg-emerald-600 hover:text-white hover:border-emerald-600"
+                  icon={WhatsAppIcon}
+                >
+                  WhatsApp Us
                 </Button>
               </div>
 
@@ -536,6 +550,16 @@ export default function Home() {
                 Get a Quote
               </Button>
               <Button
+                href={whatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="lg"
+                className="bg-[#25D366] hover:bg-[#20bd5a] text-white border-0 font-heading font-semibold"
+                icon={WhatsAppIcon}
+              >
+                WhatsApp Chat
+              </Button>
+              <Button
                 to="/contact"
                 variant="outline"
                 size="lg"
@@ -546,6 +570,18 @@ export default function Home() {
             </div>
 
             <div className="pt-6 text-xs text-slate-400 flex flex-wrap items-center justify-center gap-4">
+              <span className="flex items-center gap-1.5">
+                <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
+                <a
+                  href={whatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 font-medium"
+                >
+                  WhatsApp: {COMPANY_INFO.phonePrimary}
+                </a>
+              </span>
+              <span>•</span>
               <span className="flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-[#D71920]" />
                 <a href={`tel:${COMPANY_INFO.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-white">
@@ -565,6 +601,9 @@ export default function Home() {
           </RevealOnScroll>
         </div>
       </section>
+
+      {/* Floating WhatsApp Action Widget */}
+      <WhatsAppButton />
     </div>
   );
 }
