@@ -17,23 +17,35 @@ export default function Logo({ variant = 'dark', size = 'md', to = '/', classNam
     lg: 'h-14 sm:h-16',
   }[size] || 'h-11 sm:h-12 md:h-14';
 
-  // For Navbar (variant="dark"): Render the authentic logo from the /logo folder
-  if (!isLight && !imgError) {
-    const logoImgContent = (
+  // Render the authentic logo from the /logo folder (both dark navbar and light footer)
+  if (!imgError) {
+    const logoImg = (
+      <img
+        src="/logo/logo-nav.png"
+        onError={(e) => {
+          // Fallback to original /logo/logo.png if logo-nav is missing, or fallback to SVG
+          if (e.currentTarget.src.includes('logo-nav.png')) {
+            e.currentTarget.src = '/logo/logo.png';
+          } else {
+            setImgError(true);
+          }
+        }}
+        alt="Indian Safety Solution (ISS)"
+        className={`${
+          isLight ? 'h-11 sm:h-13' : heightClasses
+        } w-auto object-contain transition-transform duration-200 group-hover:scale-105`}
+      />
+    );
+
+    const logoImgContent = isLight ? (
+      <div className={`inline-flex items-center select-none group ${className}`}>
+        <div className="bg-white px-3.5 py-2 rounded-xl shadow-md border border-white/20 transition-all duration-200 group-hover:scale-105 group-hover:shadow-lg inline-flex items-center">
+          {logoImg}
+        </div>
+      </div>
+    ) : (
       <div className={`flex items-center select-none group py-0.5 ${className}`}>
-        <img
-          src="/logo/logo-nav.png"
-          onError={(e) => {
-            // Fallback to original /logo/logo.png if logo-nav is missing, or fallback to SVG
-            if (e.currentTarget.src.includes('logo-nav.png')) {
-              e.currentTarget.src = '/logo/logo.png';
-            } else {
-              setImgError(true);
-            }
-          }}
-          alt="Indian Safety Solution (ISS)"
-          className={`${heightClasses} w-auto object-contain transition-transform duration-200 group-hover:scale-105`}
-        />
+        {logoImg}
       </div>
     );
 
