@@ -1,15 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 /**
  * ISS Brand Logo Component
- * Supports 'dark' (for white/light backgrounds) and 'light' (for dark navy footers/backgrounds)
+ * - 'dark' (Navbar / light background): Renders official ISS brand logo from /logo/logo-nav.png (fallback: /logo/logo.png)
+ * - 'light' (Footer / dark background): Renders high-contrast SVG brand emblem & typography
  */
-export default function Logo({ variant = 'dark', size = 'md', to = '/' }) {
+export default function Logo({ variant = 'dark', size = 'md', to = '/', className = '' }) {
   const isLight = variant === 'light';
+  const [imgError, setImgError] = useState(false);
 
-  const logoContent = (
-    <div className="flex items-center gap-3 select-none group">
+  // Height configurations
+  const heightClasses = {
+    sm: 'h-9 sm:h-10',
+    md: 'h-11 sm:h-12 md:h-14',
+    lg: 'h-14 sm:h-16',
+  }[size] || 'h-11 sm:h-12 md:h-14';
+
+  // For Navbar (variant="dark"): Render the authentic logo from the /logo folder
+  if (!isLight && !imgError) {
+    const logoImgContent = (
+      <div className={`flex items-center select-none group py-0.5 ${className}`}>
+        <img
+          src="/logo/logo-nav.png"
+          onError={(e) => {
+            // Fallback to original /logo/logo.png if logo-nav is missing, or fallback to SVG
+            if (e.currentTarget.src.includes('logo-nav.png')) {
+              e.currentTarget.src = '/logo/logo.png';
+            } else {
+              setImgError(true);
+            }
+          }}
+          alt="Indian Safety Solution (ISS)"
+          className={`${heightClasses} w-auto object-contain transition-transform duration-200 group-hover:scale-105`}
+        />
+      </div>
+    );
+
+    if (to) {
+      return (
+        <Link
+          to={to}
+          className="inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#062A4F] rounded-lg"
+          aria-label="Indian Safety Solution Home"
+        >
+          {logoImgContent}
+        </Link>
+      );
+    }
+    return logoImgContent;
+  }
+
+  // Fallback or Light Variant (for dark backgrounds like Footer)
+  const svgLogoContent = (
+    <div className={`flex items-center gap-3 select-none group ${className}`}>
       {/* Industrial Shield / Safety Emblem */}
       <div className="relative flex-shrink-0">
         <svg
@@ -81,11 +125,15 @@ export default function Logo({ variant = 'dark', size = 'md', to = '/' }) {
 
   if (to) {
     return (
-      <Link to={to} className="inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#062A4F] rounded">
-        {logoContent}
+      <Link
+        to={to}
+        className="inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#062A4F] rounded"
+        aria-label="Indian Safety Solution Home"
+      >
+        {svgLogoContent}
       </Link>
     );
   }
 
-  return logoContent;
+  return svgLogoContent;
 }

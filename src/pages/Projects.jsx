@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
-import { Card, CardHeader, CardBody } from '../components/Card';
+import Card from '../components/Card';
 import RevealOnScroll from '../components/RevealOnScroll';
 import { Flame, BellRing, AlertTriangle, Lock, CheckCircle2, ArrowRight, Factory, Warehouse, Building, Layers } from 'lucide-react';
 
@@ -70,44 +70,42 @@ export default function Projects() {
         </RevealOnScroll>
 
         {/* 4 Core Project Capability Divisions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
           {projectCapabilities.map((cap, idx) => {
             const Icon = cap.icon;
             return (
               <RevealOnScroll key={idx} delay={idx * 60} className="h-full">
-                <Card className="h-full">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-12 h-12 rounded-lg bg-[#062A4F]/10 flex items-center justify-center text-[#062A4F]">
+                <Card className="h-full p-6 sm:p-7 lg:p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-[#062A4F]/10 flex items-center justify-center text-[#062A4F] shrink-0">
                         <Icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-bold text-lg text-[#062A4F]">
+                        <h3 className="font-heading font-bold text-lg sm:text-xl text-[#062A4F] leading-snug">
                           {cap.title}
                         </h3>
-                        <span className="text-xs text-[#D71920] font-semibold">
+                        <span className="text-xs text-[#D71920] font-semibold tracking-wide block mt-1">
                           On-Site Industrial Execution
                         </span>
                       </div>
                     </div>
-                  </CardHeader>
 
-                  <CardBody className="space-y-3">
-                    <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+                    <p className="text-sm text-[#64748B] leading-relaxed mb-6">
                       {cap.scope}
                     </p>
+                  </div>
 
-                    <div className="pt-2 border-t border-slate-100">
-                      <ul className="space-y-1.5 text-xs text-[#17202A]">
-                        {cap.points.map((pt, pIdx) => (
-                          <li key={pIdx} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#062A4F] flex-shrink-0 mt-0.5" />
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardBody>
+                  <div className="pt-4 border-t border-slate-100">
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-[#17202A]">
+                      {cap.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="flex items-start gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-[#062A4F] shrink-0 mt-0.5" />
+                          <span className="leading-snug">{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </Card>
               </RevealOnScroll>
             );
@@ -133,7 +131,7 @@ export default function Projects() {
               {applicationSectors.map((sector, sIdx) => {
                 const SecIcon = sector.icon;
                 return (
-                  <div key={sIdx} className="bg-white border border-slate-200 rounded-xl p-5 text-center flex flex-col items-center">
+                  <div key={sIdx} className="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 text-center flex flex-col items-center">
                     <div className="w-12 h-12 rounded-lg bg-[#062A4F]/5 text-[#062A4F] flex items-center justify-center mb-3">
                       <SecIcon className="w-6 h-6" />
                     </div>

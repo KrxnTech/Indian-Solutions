@@ -1,0 +1,154 @@
+/**
+ * Multi-Row Client Logo Wall Animation Styles
+ *
+ * Full-color brand restoration with subtle ambient depth,
+ * GPU-accelerated bi-directional infinite marquee streams,
+ * and WCAG-compliant hover-pause & reduced motion overrides.
+ */
+
+:root {
+  --logo-card-w: 190px;
+  --logo-card-h: 96px;
+  --logo-gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --logo-card-w: 160px;
+    --logo-card-h: 84px;
+    --logo-gap: 0.85rem;
+  }
+}
+
+/* Normalized prominent logo sizing within cards */
+.client-logo {
+  width: auto;
+  height: auto;
+  max-width: 85%;
+  max-height: 75%;
+  object-fit: contain;
+}
+
+/* Premium subtle corporate background depth */
+.client-wall-section {
+  position: relative;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(6, 42, 79, 0.03) 0%, transparent 60%);
+}
+
+/* Viewport with subtle edge gradient mask for seamless entrance & exit */
+.logo-wall-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+/* Individual animated row track */
+.logo-row-track {
+  display: flex;
+  width: max-content;
+  gap: var(--logo-gap);
+  padding: 0.5rem 0;
+  will-change: transform;
+}
+
+/* Row 1, 3: Moves Left (0% -> -50%) */
+.logo-row-track.direction-left {
+  animation: scrollLeft var(--row-speed, 48s) linear infinite;
+}
+
+/* Row 2, 4: Moves Right (-50% -> 0%) */
+.logo-row-track.direction-right {
+  animation: scrollRight var(--row-speed, 48s) linear infinite;
+}
+
+/* Pause specific row when hovered or when receiving keyboard focus */
+.logo-row-container:hover .logo-row-track,
+.logo-row-track:focus-within {
+  animation-play-state: paused;
+}
+
+/* GPU-accelerated left scrolling */
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* GPU-accelerated right scrolling */
+@keyframes scrollRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Modal animations */
+@keyframes clientModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes clientModalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.client-modal-backdrop {
+  animation: clientModalFadeIn 200ms ease-out forwards;
+}
+
+.client-modal-content {
+  animation: clientModalScaleUp 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Reduced Motion Override - Displays static scrollable stream without continuous movement */
+@media (prefers-reduced-motion: reduce) {
+  .logo-row-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .logo-wall-viewport {
+    overflow-x: auto;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    padding-bottom: 0.75rem;
+  }
+
+  .client-modal-backdrop,
+  .client-modal-content {
+    animation: none !important;
+  }
+}

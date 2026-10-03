@@ -37,10 +37,20 @@ const PAGE_METADATA = {
 };
 
 export default function RootLayout() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash.replace('#', ''));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 120);
+    } else {
+      window.scrollTo(0, 0);
+    }
+
     const meta = PAGE_METADATA[pathname];
     if (meta) {
       document.title = meta.title;
@@ -58,7 +68,7 @@ export default function RootLayout() {
         descTag.setAttribute('content', 'The requested page could not be found on Indian Safety Solution.');
       }
     }
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F5F7FA] text-[#17202A] selection:bg-[#062A4F] selection:text-white">

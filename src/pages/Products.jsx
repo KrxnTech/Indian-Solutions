@@ -12,8 +12,10 @@ import {
   resolveCategorySlug,
   searchProducts,
 } from '../data/products';
-import { SearchX, MessageSquareQuote, X, AlertCircle } from 'lucide-react';
+import { SearchX, MessageSquareQuote, X, AlertCircle, FileText } from 'lucide-react';
 import { COMPANY_INFO } from '../data/company';
+import { ALL_CATALOGUES, CATALOGUES_COUNT } from '../data/catalogues';
+import CatalogueSection from '../components/CatalogueSection';
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -142,19 +144,38 @@ export default function Products() {
   return (
     <div className="py-6 sm:py-10 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 1. Compact Page Header */}
+        {/* 1. Page Header with Catalogue Download Action */}
         <RevealOnScroll>
-          <header className="mb-6 sm:mb-8 text-center sm:text-left">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider bg-[#062A4F]/10 text-[#062A4F] mb-2">
-              <span>Product Catalogue</span>
+          <header className="mb-6 sm:mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider bg-[#062A4F]/10 text-[#062A4F] mb-2">
+                <span>Product Catalogue</span>
+              </div>
+              <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#062A4F] tracking-tight">
+                Industrial Safety &amp; Fire Protection Catalogue
+              </h1>
+              <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-2xl leading-relaxed">
+                Explore our industrial and fire safety product range. Certified PPE, fire installations, and facility hazard controls.
+              </p>
             </div>
-            <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#062A4F] tracking-tight">
-              Industrial Safety &amp; Fire Protection Catalogue
-            </h1>
-            <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-2xl leading-relaxed">
-              Explore our industrial and fire safety product range. Certified PPE, fire installations, and facility hazard controls.
-            </p>
+
+            {/* Quick Action Button for Official PDF Catalogues */}
+            <div className="shrink-0 flex items-center justify-center sm:justify-start gap-2">
+              <a
+                href="#product-catalogues"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#062A4F] hover:bg-[#D71920] text-white text-xs font-heading font-bold shadow-xs hover:shadow-md transition-all duration-200 group cursor-pointer"
+              >
+                <FileText className="w-4 h-4 text-[#FFC400] group-hover:text-white" />
+                <span>Official PDF Catalogues ({CATALOGUES_COUNT})</span>
+                <span className="text-[#FFC400] group-hover:text-white transition-transform group-hover:translate-y-0.5">↓</span>
+              </a>
+            </div>
           </header>
+        </RevealOnScroll>
+
+        {/* 2. Official PDF Catalogues Section (Discovered dynamically from /Catalogue folder) */}
+        <RevealOnScroll className="mb-8 sm:mb-10">
+          <CatalogueSection highlightCategory={selectedCategory !== 'all' ? selectedCategory : null} />
         </RevealOnScroll>
 
         {/* Invalid Category Alert Banner (Graceful fallback) */}

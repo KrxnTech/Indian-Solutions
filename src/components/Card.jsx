@@ -71,7 +71,7 @@ export function CardHeader({ children, className = '' }) {
 }
 
 export function CardBody({ children, className = '' }) {
-  return <div className={`px-5 py-2 flex-grow text-[#64748B] text-sm leading-relaxed ${className}`.trim()}>{children}</div>;
+  return <div className={`px-5 py-2 last:pb-5 flex-grow text-[#64748B] text-sm leading-relaxed ${className}`.trim()}>{children}</div>;
 }
 
 export function CardFooter({ children, className = '' }) {

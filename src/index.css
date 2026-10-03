@@ -22,7 +22,12 @@
     background-color: #F5F7FA;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     letter-spacing: -0.015em;
   }
@@ -38,13 +43,16 @@
     width: 8px;
     height: 8px;
   }
+
   ::-webkit-scrollbar-track {
     background: #F1F5F9;
   }
+
   ::-webkit-scrollbar-thumb {
     background: #CBD5E1;
     border-radius: 4px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: #94A3B8;
   }
@@ -56,6 +64,7 @@
     opacity: 0;
     transform: translateY(16px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -63,9 +72,12 @@
 }
 
 @keyframes heroCaretPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.9;
   }
+
   50% {
     opacity: 0.2;
   }
@@ -106,6 +118,7 @@
 
 /* Reduced Motion Accessibility - Absolute Override */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

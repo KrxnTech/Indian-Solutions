@@ -377,10 +377,20 @@ export default function Home() {
             })}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
             <RevealOnScroll delay={150}>
               <Button to="/products" variant="primary" size="lg" icon={ArrowRight}>
                 Explore All 14 Product Divisions
+              </Button>
+            </RevealOnScroll>
+            <RevealOnScroll delay={200}>
+              <Button
+                to="/products#product-catalogues"
+                variant="outline"
+                size="lg"
+                className="border-[#062A4F] text-[#062A4F] hover:bg-[#062A4F] hover:text-white"
+              >
+                <span>Download Official Catalogues (PDF)</span>
               </Button>
             </RevealOnScroll>
           </div>
@@ -570,29 +580,11 @@ export default function Home() {
             </div>
 
             <div className="pt-6 text-xs text-slate-400 flex flex-wrap items-center justify-center gap-4">
-              <span className="flex items-center gap-1.5">
-                <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
-                <a
-                  href={whatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-400 hover:text-emerald-300 font-medium"
-                >
-                  WhatsApp: {COMPANY_INFO.phonePrimary}
-                </a>
-              </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-[#D71920]" />
                 <a href={`tel:${COMPANY_INFO.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-white">
                   {COMPANY_INFO.phonePrimary}
-                </a>
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-[#D71920]" />
-                <a href={`tel:${COMPANY_INFO.phoneSecondary.replace(/\s+/g, '')}`} className="hover:text-white">
-                  {COMPANY_INFO.phoneSecondary}
                 </a>
               </span>
               <span>•</span>

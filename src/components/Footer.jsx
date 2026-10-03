@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, Globe, ShieldCheck } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, ShieldCheck } from 'lucide-react';
 import Logo from './Logo';
 import { NAV_LINKS, FOOTER_SERVICES, FOOTER_PRODUCTS } from '../data/navigation';
 import { COMPANY_INFO } from '../data/company';
@@ -93,6 +93,19 @@ export default function Footer() {
                   <div>{COMPANY_INFO.address.highway}</div>
                   <div>{COMPANY_INFO.address.taluka}, {COMPANY_INFO.address.district}</div>
                   <div className="text-slate-200">{COMPANY_INFO.address.stateZip}</div>
+
+                  {/* Get More Addresses Button */}
+                  <div className="pt-2">
+                    <Link
+                      to="/contact#our-locations"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#062A4F] hover:bg-[#D71920] text-slate-100 hover:text-white text-[11px] font-heading font-medium border border-slate-700/80 hover:border-[#D71920] transition-all duration-200 shadow-xs group whitespace-nowrap"
+                    >
+                      <span>View All 6 Locations</span>
+                      <span className="text-[#FFC400] group-hover:text-white transition-transform group-hover:translate-x-0.5">
+                        →
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
@@ -104,14 +117,6 @@ export default function Footer() {
                       className="hover:text-white transition-colors"
                     >
                       {COMPANY_INFO.phonePrimary}
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href={`tel:${COMPANY_INFO.phoneSecondary.replace(/\s+/g, '')}`}
-                      className="hover:text-white transition-colors"
-                    >
-                      {COMPANY_INFO.phoneSecondary}
                     </a>
                   </div>
                 </div>
@@ -135,10 +140,6 @@ export default function Footer() {
                 >
                   {COMPANY_INFO.website}
                 </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
-                <span>{COMPANY_INFO.businessHours}</span>
               </li>
             </ul>
           </div>
