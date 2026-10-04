@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Shield, Volume2, VolumeX } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 const LINE_1_TEXT = 'INDIAN SAFETY SOLUTION';
 const LINE_2_TEXT = 'Protecting People Protecting Industry';
@@ -25,8 +25,6 @@ export default function WelcomeScreen({ onEnter }) {
   const [isLine2Done, setIsLine2Done] = useState(false);
   const [isLine3Done, setIsLine3Done] = useState(false);
 
-  const [soundEnabled, setSoundEnabled] = useState(true);
-
   const audioCtxRef = useRef(null);
   const exitTriggeredRef = useRef(false);
 
@@ -47,7 +45,6 @@ export default function WelcomeScreen({ onEnter }) {
   // Soft mechanical keyboard click sound via Web Audio API
   const playTypingClick = useCallback(
     (char = '') => {
-      if (!soundEnabled) return;
       if (char === ' ') return; // silent on spacebar for realistic cadence
 
       try {
@@ -78,7 +75,7 @@ export default function WelcomeScreen({ onEnter }) {
         // Safe fallback
       }
     },
-    [soundEnabled, getAudioContext]
+    [getAudioContext]
   );
 
   // Trigger exit to reveal existing website
@@ -310,36 +307,15 @@ export default function WelcomeScreen({ onEnter }) {
         ))}
       </div>
 
-      {/* Top Header: Unobtrusive Audio Toggle & Skip */}
+      {/* Top Header: Unobtrusive Skip Intro */}
       <header
         style={{
           paddingTop: 'max(1.5rem, env(safe-area-inset-top, 1.5rem))',
           paddingLeft: 'max(1.5rem, env(safe-area-inset-left, 1.5rem))',
           paddingRight: 'max(1.5rem, env(safe-area-inset-right, 1.5rem))',
         }}
-        className="absolute top-0 left-0 right-0 flex items-center justify-between z-20 pointer-events-auto"
+        className="absolute top-0 left-0 right-0 flex items-center justify-end z-20 pointer-events-auto"
       >
-        {/* Soft Audio Click Toggle */}
-        <button
-          type="button"
-          onClick={() => setSoundEnabled((prev) => !prev)}
-          title={soundEnabled ? 'Mute sound effects' : 'Enable sound effects'}
-          aria-label={soundEnabled ? 'Mute sound effects' : 'Enable sound effects'}
-          className="group flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-medium tracking-wide bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/15 hover:border-white/40 text-white/80 hover:text-white transition-all duration-300 shadow-lg cursor-pointer"
-        >
-          {soundEnabled ? (
-            <>
-              <Volume2 className="w-3.5 h-3.5 text-emerald-400 group-hover:text-emerald-300" />
-              <span className="hidden sm:inline">Audio On</span>
-            </>
-          ) : (
-            <>
-              <VolumeX className="w-3.5 h-3.5 text-white/60 group-hover:text-white" />
-              <span className="hidden sm:inline">Audio Muted</span>
-            </>
-          )}
-        </button>
-
         {/* Subtle Skip Intro button */}
         <button
           type="button"

@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
 
 export default function IntroVideo({ onComplete }) {
-  // Default sound to ON (unmuted)
-  const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [hasControlsFadedIn, setHasControlsFadedIn] = useState(false);
 
@@ -32,19 +29,6 @@ export default function IntroVideo({ onComplete }) {
     }
   }, [onComplete]);
 
-  // Force sound unmuted helper
-  const activateSound = useCallback(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.muted = false;
-      video.volume = 1.0;
-      setIsMuted(false);
-      if (video.paused) {
-        video.play().catch(() => {});
-      }
-    }
-  }, []);
-
   // Controls delay for cinematic immersion
   useEffect(() => {
     const controlsTimer = setTimeout(() => {
@@ -56,74 +40,34 @@ export default function IntroVideo({ onComplete }) {
     };
   }, []);
 
-  // Automatic video playback with SOUND ALWAYS ON
+  // Automatic video playback with audio enabled by default
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    let cleanupListeners = null;
-
-    const startPlayWithSound = async () => {
+    const startPlayback = async () => {
       try {
-        // ALWAYS try unmuted at full volume first
-        video.muted = false;
-        video.volume = 1.0;
         await video.play();
-        setIsMuted(false);
       } catch (err) {
-        console.warn('Autoplay policy required gesture for sound:', err);
-        // If unmuted autoplay blocked by browser policy on cold start, play muted temporarily
-        try {
-          video.muted = true;
-          setIsMuted(true);
-          await video.play();
-        } catch (silentErr) {
-          console.warn('Muted autoplay also blocked:', silentErr);
-        }
-
-        // Arm listeners so ANY first user gesture instantly activates sound
-        const handleFirstInteraction = () => {
-          activateSound();
-          removeListeners();
-        };
-
-        const removeListeners = () => {
-          window.removeEventListener('click', handleFirstInteraction);
-          window.removeEventListener('touchstart', handleFirstInteraction);
-          window.removeEventListener('pointerdown', handleFirstInteraction);
-          window.removeEventListener('keydown', handleFirstInteraction);
-        };
-
-        cleanupListeners = removeListeners;
-
-        window.addEventListener('click', handleFirstInteraction, { once: true });
-        window.addEventListener('touchstart', handleFirstInteraction, { once: true });
-        window.addEventListener('pointerdown', handleFirstInteraction, { once: true });
-        window.addEventListener('keydown', handleFirstInteraction, { once: true });
+        console.warn('Autoplay with audio was restricted by browser policy:', err);
       }
     };
 
-    startPlayWithSound();
+    startPlayback();
 
-    // Safety fallback: if video stalls or takes abnormally long, don't trap the user
+    // Fallback: if browser policy completely blocks autoplay (stuck at 0s while paused),
+    // proceed to welcome screen after a short wait so intro flow is not broken
     const safetyTimeout = setTimeout(() => {
       if (video.paused && video.currentTime === 0 && !completedRef.current) {
-        console.info('Intro video fallback triggered to proceed.');
+        console.info('Autoplay restricted by browser policy, continuing to welcome screen.');
         finishVideo();
       }
-    }, 12000);
+    }, 4000);
 
     return () => {
       clearTimeout(safetyTimeout);
-      if (cleanupListeners) cleanupListeners();
     };
-  }, [finishVideo, activateSound]);
-
-  // Clicking anywhere on the video overlay activates sound if muted
-  const handleOverlayClick = (e) => {
-    if (e.target.closest('#skip-video-btn')) return;
-    activateSound();
-  };
+  }, [finishVideo]);
 
   // Video time update for progress indicator
   const handleTimeUpdate = () => {
@@ -151,7 +95,6 @@ export default function IntroVideo({ onComplete }) {
       aria-label="Cinematic Intro Video"
       role="dialog"
       aria-modal="true"
-      onClick={handleOverlayClick}
       style={{
         position: 'absolute',
         inset: 0,
@@ -159,13 +102,18 @@ export default function IntroVideo({ onComplete }) {
         height: '100%',
         backgroundColor: '#000000',
       }}
-      className="w-full h-full select-none cursor-pointer overflow-hidden"
+      className="w-full h-full select-none overflow-hidden cursor-default"
+      onClick={() => {
+        if (videoRef.current && videoRef.current.paused && !completedRef.current) {
+          videoRef.current.play().catch(() => {});
+        }
+      }}
     >
-      {/* HTML5 Video Element - Fullscreen, Cover, Centered */}
+      {/* HTML5 Video Element - Fullscreen, Cover, Centered, Autoplay with Audio */}
       <video
         ref={videoRef}
-        playsInline
         autoPlay
+        playsInline
         preload="auto"
         controls={false}
         onTimeUpdate={handleTimeUpdate}
@@ -186,44 +134,18 @@ export default function IntroVideo({ onComplete }) {
         Your browser does not support the video tag.
       </video>
 
-      {/* Cinematic Top Controls Bar */}
+      {/* Cinematic Top Controls Bar: No Sound Toggle UI */}
       <div
         style={{
           paddingTop: 'max(1.5rem, env(safe-area-inset-top, 1.5rem))',
           paddingLeft: 'max(1.5rem, env(safe-area-inset-left, 1.5rem))',
           paddingRight: 'max(1.5rem, env(safe-area-inset-right, 1.5rem))',
         }}
-        className={`absolute top-0 left-0 right-0 flex items-center justify-between z-20 pointer-events-auto transition-opacity duration-500 ease-in-out ${
+        className={`absolute top-0 left-0 right-0 flex items-center justify-end z-20 pointer-events-auto transition-opacity duration-500 ease-in-out ${
           hasControlsFadedIn ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        {/* Sound Status Badge / Prompt */}
-        {isMuted ? (
-          <button
-            type="button"
-            id="intro-unmute-btn"
-            onClick={(e) => {
-              e.stopPropagation();
-              activateSound();
-            }}
-            title="Click to turn sound on"
-            aria-label="Click to turn sound on"
-            className="group flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-red-600/90 hover:bg-red-600 active:scale-95 text-white transition-all duration-300 shadow-xl shadow-red-950/50 cursor-pointer animate-pulse"
-          >
-            <VolumeX className="w-4 h-4 text-white" />
-            <span>Click for Sound 🔊</span>
-          </button>
-        ) : (
-          <div
-            id="intro-sound-active-badge"
-            className="flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium tracking-wide bg-black/50 backdrop-blur-md border border-emerald-500/40 text-emerald-400 shadow-xl pointer-events-none"
-          >
-            <Volume2 className="w-4 h-4 text-emerald-400 animate-pulse" />
-            <span className="font-semibold">Sound ON</span>
-          </div>
-        )}
-
-        {/* Skip Video → Button */}
+        {/* Subtle Skip Video → Button */}
         <button
           type="button"
           id="skip-video-btn"

@@ -171,7 +171,7 @@ export default function Footer() {
       <div className="bg-[#010C17] py-4 px-4 sm:px-6 lg:px-8 text-xs text-slate-400 border-t border-slate-900">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <p>
-            © {currentYear} {COMPANY_INFO.name}. All rights reserved. Complete Industrial & Fire Safety Solutions.
+            © {currentYear} {COMPANY_INFO.name}. All rights reserved. Complete Industrial & Fire Safety Solution.
           </p>
           <p className="text-slate-400">
             {COMPANY_INFO.address.taluka}, {COMPANY_INFO.address.district}, Gujarat
