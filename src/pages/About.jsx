@@ -102,7 +102,7 @@ export default function About() {
 
                 {/* Paragraph 1 */}
                 <p className="text-[#17202A] text-sm sm:text-base leading-relaxed font-medium">
-                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong> under the brand name <strong className="text-[#062A4F]">INDIAN AGNI</strong>, now recognized as <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTIONS</strong>, an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier for a premium range of fire protection systems &amp; accessories conforming to Indian Standards and other relevant benchmarks. We are also an <span className="underline decoration-[#D71920] decoration-2 underline-offset-2">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</span>.
+                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong> under the brand name <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong>, now recognized as <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTIONS</strong>, an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier for a premium range of fire protection systems &amp; accessories conforming to Indian Standards and other relevant benchmarks. We are also an <span className="underline decoration-[#D71920] decoration-2 underline-offset-2">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</span>.
                 </p>
 
                 {/* Paragraph 2 */}
