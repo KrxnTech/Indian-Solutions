@@ -97,7 +97,7 @@ export default function Contact() {
   return (
     <div className="py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 md:space-y-20">
-        
+
         {/* Page Main Heading */}
         <RevealOnScroll>
           <SectionHeading
@@ -141,11 +141,10 @@ export default function Contact() {
                     <div
                       key={loc.id}
                       style={{ height: `${cardHeight}px` }}
-                      className={`group relative bg-white border rounded-xl p-3 sm:p-3.5 transition-all duration-300 hover:-translate-y-1 shadow-xs hover:shadow-md flex flex-col justify-between ${
-                        isHead
+                      className={`group relative bg-white border rounded-xl p-3 sm:p-3.5 transition-all duration-300 hover:-translate-y-1 shadow-xs hover:shadow-md flex flex-col justify-between ${isHead
                           ? 'border-slate-300 hover:border-[#D71920]/60 ring-1 ring-slate-200/60'
                           : 'border-slate-200/90 hover:border-[#062A4F]/40'
-                      }`}
+                        }`}
                     >
                       <div className="flex flex-col min-w-0">
                         {/* Top Header: Pin & Tag */}
@@ -154,13 +153,12 @@ export default function Contact() {
                             <MapPin className="w-3 h-3 shrink-0" />
                           </div>
                           <span
-                            className={`text-[9px] font-heading font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full truncate ${
-                              isHead
+                            className={`text-[9px] font-heading font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full truncate ${isHead
                                 ? 'bg-[#D71920]/10 text-[#D71920] border border-[#D71920]/20'
                                 : loc.id === 'workshop'
-                                ? 'bg-amber-50 text-amber-800 border border-amber-200/60'
-                                : 'bg-slate-100 text-[#062A4F] border border-slate-200/60'
-                            }`}
+                                  ? 'bg-amber-50 text-amber-800 border border-amber-200/60'
+                                  : 'bg-slate-100 text-[#062A4F] border border-slate-200/60'
+                              }`}
                           >
                             {isHead ? 'Head Office' : loc.id === 'workshop' ? 'Work Shop' : 'Branch'}
                           </span>
@@ -377,19 +375,17 @@ export default function Contact() {
                     aria-haspopup="listbox"
                     aria-expanded={isDropdownOpen}
                     onClick={() => setIsDropdownOpen((prev) => !prev)}
-                    className={`w-full px-3.5 py-2.5 text-xs sm:text-sm border rounded-lg bg-white text-[#17202A] flex items-center justify-between text-left transition-all cursor-pointer ${
-                      isDropdownOpen
+                    className={`w-full px-3.5 py-2.5 text-xs sm:text-sm border rounded-lg bg-white text-[#17202A] flex items-center justify-between text-left transition-all cursor-pointer ${isDropdownOpen
                         ? 'border-[#062A4F] ring-2 ring-[#062A4F]/20'
                         : 'border-slate-300 hover:border-slate-400'
-                    }`}
+                      }`}
                   >
                     <span className="font-medium truncate pr-2">
                       {formData.requirement}
                     </span>
                     <ChevronDown
-                      className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${
-                        isDropdownOpen ? 'rotate-180 text-[#062A4F]' : ''
-                      }`}
+                      className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-[#062A4F]' : ''
+                        }`}
                     />
                   </button>
 
@@ -415,11 +411,10 @@ export default function Contact() {
                                     setFormData((prev) => ({ ...prev, requirement: item }));
                                     setIsDropdownOpen(false);
                                   }}
-                                  className={`w-full px-3.5 py-2 text-xs sm:text-sm text-left flex items-center justify-between transition-colors cursor-pointer ${
-                                    isSelected
+                                  className={`w-full px-3.5 py-2 text-xs sm:text-sm text-left flex items-center justify-between transition-colors cursor-pointer ${isSelected
                                       ? 'bg-[#062A4F]/10 text-[#062A4F] font-semibold'
                                       : 'text-[#17202A] hover:bg-slate-50 hover:text-[#062A4F]'
-                                  }`}
+                                    }`}
                                 >
                                   <span className="truncate pr-2">{item}</span>
                                   {isSelected && (
@@ -562,13 +557,6 @@ export default function Contact() {
                 <div>
                   <strong className="block text-[#062A4F] font-semibold">Loading Dock &amp; Logistics</strong>
                   <span className="text-[#64748B]">Equipped for bulk dispatch, heavy vehicles &amp; freight carriers</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
-                <div>
-                  <strong className="block text-[#062A4F] font-semibold">Office Hours &amp; Visits</strong>
-                  <span className="text-[#64748B]">Monday – Saturday: 09:00 AM – 06:30 PM IST</span>
                 </div>
               </div>
             </div>
