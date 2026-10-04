@@ -102,12 +102,12 @@ export default function About() {
 
                 {/* Paragraph 1 */}
                 <p className="text-[#17202A] text-sm sm:text-base leading-relaxed font-medium">
-                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong> under the brand name <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong>, now recognized as <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTIONS</strong>, an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier for a premium range of fire protection systems &amp; accessories conforming to Indian Standards and other relevant benchmarks. We are also an <span className="underline decoration-[#D71920] decoration-2 underline-offset-2">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</span>.
+                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong> under the brand name <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong>, now recognized as <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong>, an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier for a premium range of fire protection systems &amp; accessories conforming to Indian Standards and other relevant benchmarks. We are also an <span className="underline decoration-[#D71920] decoration-2 underline-offset-2">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</span>.
                 </p>
 
                 {/* Paragraph 2 */}
                 <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  We have emerged to become one of the trusted and most innovative manufacturers of portable, trolley &amp; trailer-mounted fire extinguishers and gas cartridges, as well as fire alarm and hydrant systems, fire detection &amp; suppression systems, and comprehensive safety products for commercial and industrial applications. The <strong className="text-[#062A4F]">INDIAN AGNI</strong> brand is renowned across the industry for the quality of its products and reliability of services.
+                  We have emerged to become one of the trusted and most innovative manufacturers of portable, trolley &amp; trailer-mounted fire extinguishers and gas cartridges, as well as fire alarm and hydrant systems, fire detection &amp; suppression systems, and comprehensive safety products for commercial and industrial applications. The <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> brand is renowned across the industry for the quality of its products and reliability of services.
                 </p>
 
                 {/* Paragraph 3 */}
@@ -122,7 +122,7 @@ export default function About() {
 
                 {/* Paragraph 5 */}
                 <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  The <strong className="text-[#062A4F]">INDIAN AGNI</strong> brand is managed by a highly qualified management team and possesses in-house engineering expertise, dedicated project teams, and comprehensive quality control supported by a well-equipped testing lab. Supported by many years of proven performance serving esteemed clients across India, we continue to achieve total quality in fire protection solutions that deliver complete customer satisfaction.
+                  The <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> brand is managed by a highly qualified management team and possesses in-house engineering expertise, dedicated project teams, and comprehensive quality control supported by a well-equipped testing lab. Supported by many years of proven performance serving esteemed clients across India, we continue to achieve total quality in fire protection solutions that deliver complete customer satisfaction.
                 </p>
 
                 {/* Action Buttons */}
@@ -266,7 +266,7 @@ export default function About() {
                 </div>
 
                 <p className="text-[#17202A] text-sm sm:text-base leading-relaxed font-medium pt-2">
-                  &ldquo;INDIAN SAFETY SOLUTIONS aspires to be recognized as a forefront global leader and synonymous with saving lives and protecting properties in the fire and safety sector.&rdquo;
+                  &ldquo;INDIAN SAFETY SOLUTION aspires to be recognized as a forefront global leader and synonymous with saving lives and protecting properties in the fire and safety sector.&rdquo;
                 </p>
               </div>
 
@@ -300,7 +300,7 @@ export default function About() {
                 </div>
 
                 <p className="text-[#17202A] text-sm sm:text-base leading-relaxed font-medium pt-2">
-                  &ldquo;INDIAN SAFETY SOLUTIONS is committed to raise the bar of excellence in the area of services, products and quality. We believe in endeavoring our commitment by upholding the highest ethical standard, commitment &amp; integrity.&rdquo;
+                  &ldquo;INDIAN SAFETY SOLUTION is committed to raise the bar of excellence in the area of services, products and quality. We believe in endeavoring our commitment by upholding the highest ethical standard, commitment &amp; integrity.&rdquo;
                 </p>
               </div>
 
