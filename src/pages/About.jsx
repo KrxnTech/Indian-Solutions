@@ -101,28 +101,13 @@ export default function About() {
                 </h3>
 
                 {/* Paragraph 1 */}
-                <p className="text-[#17202A] text-sm sm:text-base leading-relaxed font-medium">
-                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong> under the brand name <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong>, now recognized as <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong>, an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier for a premium range of fire protection systems &amp; accessories conforming to Indian Standards and other relevant benchmarks. We are also an <span className="underline decoration-[#D71920] decoration-2 underline-offset-2">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</span>.
+                <p className="text-[#17202A] text-sm leading-relaxed font-medium">
+                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong>, <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> is an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier of premium fire protection systems, personal protective equipment (PPE), and industrial safety infrastructure. We are also an <span className="underline decoration-[#D71920] decoration-2 underline-offset-2">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</span>, serving manufacturing facilities, chemical plants, warehousing hubs, and commercial complexes across India.
                 </p>
 
                 {/* Paragraph 2 */}
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  We have emerged to become one of the trusted and most innovative manufacturers of portable, trolley &amp; trailer-mounted fire extinguishers and gas cartridges, as well as fire alarm and hydrant systems, fire detection &amp; suppression systems, and comprehensive safety products for commercial and industrial applications. The <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> brand is renowned across the industry for the quality of its products and reliability of services.
-                </p>
-
-                {/* Paragraph 3 */}
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  We have earned a stellar reputation for excellence in the fire protection industry. Our policy of continual investment in state-of-the-art technology and innovative product development allows us to offer a unique brand and high-quality safety solutions at great value.
-                </p>
-
-                {/* Paragraph 4 */}
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  To ensure our clients and customers receive the highest quality fire protection equipment, all our products undergo rigorous in-house testing at all stages of production. Third-party testing is also available on demand to fulfill customized project specifications.
-                </p>
-
-                {/* Paragraph 5 */}
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  The <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> brand is managed by a highly qualified management team and possesses in-house engineering expertise, dedicated project teams, and comprehensive quality control supported by a well-equipped testing lab. Supported by many years of proven performance serving esteemed clients across India, we continue to achieve total quality in fire protection solutions that deliver complete customer satisfaction.
+                <p className="text-[#475569] text-sm leading-relaxed">
+                  As a trusted and innovative industry partner, we specialize in portable, trolley &amp; trailer-mounted fire extinguishers, gas cartridges, hydrant networks, and advanced fire detection &amp; suppression systems. Backed by in-house engineering expertise, rigorous testing at all production stages, and dedicated project execution teams, we deliver reliable, high-value safety solutions built for total statutory compliance and client protection.
                 </p>
 
                 {/* Action Buttons */}
