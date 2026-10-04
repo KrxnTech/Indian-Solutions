@@ -116,6 +116,44 @@
   transform: translateY(0);
 }
 
+/* Hero Firefighter Background & Treatment */
+.hero-firefighter-bg {
+  background-image: url('/Firefighter%20Confronts%20the%20Inferno.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 35% center;
+}
+
+@media (min-width: 1024px) {
+  .hero-firefighter-bg {
+    background-position: center center;
+  }
+}
+
+.hero-firefighter-overlay {
+  /* Mobile: subtle transparent dark overlay (approx 30-35%) */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.32) 45%,
+    rgba(0, 0, 0, 0.42) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  .hero-firefighter-overlay {
+    /* Desktop: subtle dark overlay (approx 25-35% avg) — stronger on left behind heading, light on right for fire visibility */
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56) 0%,
+      rgba(0, 0, 0, 0.46) 38%,
+      rgba(0, 0, 0, 0.24) 65%,
+      rgba(0, 0, 0, 0.16) 85%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+  }
+}
+
 /* Reduced Motion Accessibility - Absolute Override */
 @media (prefers-reduced-motion: reduce) {
 

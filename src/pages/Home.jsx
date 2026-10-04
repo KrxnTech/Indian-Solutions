@@ -57,14 +57,16 @@ export default function Home() {
       {/* --------------------------------------------------
           SECTION 1 — HERO
           -------------------------------------------------- */}
-      <section className="relative bg-[#031B33] text-white py-16 md:py-24 overflow-hidden border-b-4 border-[#D71920]">
-        {/* Subtle industrial grid pattern */}
+      <section className="relative bg-[#0B0F15] text-white py-16 md:py-24 overflow-hidden border-b-4 border-[#D71920]">
+        {/* Primary Hero Firefighter Background Image */}
         <div
-          className="absolute inset-0 opacity-10 pointer-events-none"
-          style={{
-            backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`,
-            backgroundSize: '40px 40px',
-          }}
+          className="hero-firefighter-bg absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+        />
+
+        {/* Single Subtle Dark Readability Overlay: ~25-35% avg, darker on left, light on right */}
+        <div
+          className="hero-firefighter-overlay absolute inset-0 pointer-events-none"
           aria-hidden="true"
         />
 
