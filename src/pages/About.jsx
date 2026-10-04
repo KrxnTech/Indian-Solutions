@@ -97,12 +97,12 @@ export default function About() {
                 </div>
 
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#062A4F] tracking-tight">
-                  Protecting Lives &amp; Securing Industry Since 2015
+                  Protecting Lives &amp; Securing Industry Since 2013
                 </h3>
 
                 {/* Paragraph 1 */}
                 <p className="text-[#17202A] text-sm leading-relaxed font-medium">
-                  Established in the year <strong className="text-[#D71920] font-bold">2015</strong>, <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> is an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier of premium fire protection systems, personal protective equipment (PPE), and industrial safety infrastructure. We are also an <strong className="text-[#062A4F]">Approved Licensed Agency for the Directorate of Maharashtra Fire Services</strong>, serving manufacturing facilities, chemical plants, warehousing hubs, and commercial complexes across India.
+                  Established in the year <strong className="text-[#D71920] font-bold">2013</strong>, <strong className="text-[#062A4F]">INDIAN SAFETY SOLUTION</strong> is an <strong className="text-[#062A4F]">ISO 9001:2015 Certified</strong> prominent manufacturer and supplier of premium fire protection systems, personal protective equipment (PPE), and industrial safety infrastructure. We are also an <strong className="text-[#062A4F]">Approved Licensed Agency for the Directorate of Gujarat Fire Services</strong>, serving manufacturing facilities, chemical plants, warehousing hubs, and commercial complexes across India.
                 </p>
 
                 {/* Paragraph 2 */}
